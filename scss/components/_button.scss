@@ -1,0 +1,3 @@
+.open-btn {
+  @include button-style(100px, 40px, 2px, 15px, $black, $white);
+}
