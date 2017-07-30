@@ -10,6 +10,19 @@
 // Testing with basic animation: should be updated later
 @keyframes colorChange {
   0% {
+    background-color: blue;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+.refused {
+  animation: wiggle 5s 1;
+}
+
+@keyframes wiggle {
+  0% {
     background-color: red;
   }
   100% {
