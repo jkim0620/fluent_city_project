@@ -20,7 +20,7 @@ body {
   margin: 0 auto;
   text-align: center; }
 
-.open-btn {
+.open-btn, .send-btn {
   width: 100px;
   height: 40px;
   -webkit-border-radius: 2px;
@@ -35,9 +35,17 @@ body {
   font-size: 15px;
   color: #ffffff;
   background: #0b0b0b; }
-  .open-btn:hover {
+  .open-btn:hover, .send-btn:hover {
     cursor: pointer; }
 
+.enabeld {
+  animation: colorChange 2s infinite; }
+
+@keyframes colorChange {
+  0% {
+    background-color: red; }
+  100% {
+    background-color: black; } }
 .modal-wrapper {
   position: fixed;
   top: 0;

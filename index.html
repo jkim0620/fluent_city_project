@@ -25,8 +25,33 @@
         <!-- Modal for form -->
         <div id="modal" class="modal-wrapper">
           <div class="modal-container">
-            <form class="">
-              Pop up
+            <form id="form" class="" name="messageForm">
+              <div>
+                First Name
+              </div>
+              <div>
+                <input id="first-name" type="text" name="firstName" value="" placeholder="First Name" required>
+              </div>
+              <div>
+                Last Name
+              </div>
+              <div>
+                <input id="last-name" type="text" name="lastName" value="" placeholder="Last Name" required>
+              </div>
+              <div>
+                Email
+              </div>
+              <div>
+                <input type="email" name="email" value="" placeholder="Email" required>
+              </div>
+              <div>
+                Message
+              </div>
+              <div>
+                <textarea name="message" rows="8" cols="80" required></textarea>
+              </div>
+              <button id="sendBtn" class="send-btn" type="submit" name="button">SEND</button>
+              <!-- <input class="send-btn" type="submit" name="" value="SEND"> -->
             </form>
           </div>
         </div>
