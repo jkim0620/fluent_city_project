@@ -1,6 +1,25 @@
-.open-btn, .send-btn {
+.send-btn {
   @include button-style(100px, 40px, 2px, 15px, $black, $white);
 }
+
+.read-more-btn {
+  margin-top: 30px;
+  @include button-style(170px, 40px, 4px, 15px, $black, $white);
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: $black;
+  font-size: 30px;
+  position: absolute;
+  top: 5%;
+  left: 90%;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 
 // Animation that should be triggered when send-button is ready to be cliked
 .enabeld {
@@ -28,9 +47,4 @@
   100% {
     background-color: black;
   }
-}
-
-.read-more-btn {
-  margin-top: 30px;
-  @include button-style(170px, 40px, 4px, 15px, $black, $white);
 }

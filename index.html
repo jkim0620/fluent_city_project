@@ -76,7 +76,7 @@
             <div class="info-button">
               <p><i class="fa fa-envelope" aria-hidden="true"></i> GENERAL INQUIRY</p>
             </div>
-            <div class="info-button">
+            <div id="open-form-btn" class="info-button">
               <p><i class="fa fa-envelope" aria-hidden="true"></i> ENROLLMENT INQUIRY</p>
             </div>
             <a href="#faq-section">
@@ -177,6 +177,36 @@
         </div>
       </div>
     </section> <!-- /FAQ Section -->
+
+    <!-- Hidden modal for form -->
+    <section>
+      <div id="form-bg" class="form-wrapper">
+        <div id="form" class="form-container">
+          <button id="closeBtn" class="close-btn" type="button" name="button">X</button>
+          <form class="form" name="messageForm">
+            <div>
+              Name
+            </div>
+            <div>
+              <input type="text" name="name" value="" placeholder="First Name" required>
+            </div>
+            <div>
+              Email
+            </div>
+            <div>
+              <input type="email" name="email" value="" placeholder="Email" required>
+            </div>
+            <div>
+              Message
+            </div>
+            <div>
+              <textarea name="message" rows="8" cols="80" required></textarea>
+            </div>
+            <button id="sendBtn" class="send-btn" type="submit" name="button">SEND</button>
+          </form>
+        </div>
+      </div>
+    </section> <!-- /Hidden modal for form -->
 
     <footer class=footer-section>
       <div class="footer-container">

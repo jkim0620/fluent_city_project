@@ -1,12 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Content loaded!");
 
-  let openFormBtn = document.getElementById("open-form");
+  // let openFormBtn = document.getElementById("open-form");
   let modal = document.getElementById("modal");
+  let formBg = document.getElementById("form-bg");
+  let form = document.getElementById("form");
+  let openForm = document.getElementById("open-form-btn");
   let sendBtn = document.getElementById("sendBtn");
+  let closeBtn = document.getElementById("closeBtn");
 
-  openFormBtn.addEventListener("click", () => {
-    modal.style.display = "block";
+  // Open form with slide up effect
+  openForm.addEventListener("click", () => {
+    formBg.classList.toggle("display");
+    formBg.classList.toggle("opacity");
+    setTimeout(function() {
+      form.classList.toggle("slide");
+    }, 100);
+  });
+
+  // Close form with slide up effect
+  closeBtn.addEventListener("click", () => {
+    form.classList.toggle("slide");
+    formBg.classList.toggle("opacity");
+    setTimeout(function() {
+      formBg.classList.toggle("display");
+  }, 500);
   });
 
   // Function to validate if the form is ready to be submitted
@@ -31,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!messageForm.name.value || !messageForm.email.value || !messageForm.message.value) {
       sendBtn.classList.add("refused");
 
-      // Remove animation 
+      // Remove animation
       setTimeout(function() {
         sendBtn.classList.remove("refused");
     }, 1000);

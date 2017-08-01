@@ -244,7 +244,7 @@ FAQ Section
   .header-container {
     height: 500px;
     background-size: cover; } }
-.open-btn, .send-btn {
+.send-btn {
   width: 100px;
   height: 40px;
   -webkit-border-radius: 2px;
@@ -259,27 +259,11 @@ FAQ Section
   font-size: 15px;
   color: #ffffff;
   background: #1a1a1a; }
-  .open-btn:hover, .send-btn:hover {
+  .send-btn:hover {
     cursor: pointer;
     background: transparent;
     color: #1a1a1a; }
 
-.enabeld {
-  animation: colorChange 2s infinite; }
-
-@keyframes colorChange {
-  0% {
-    background-color: blue; }
-  100% {
-    background-color: black; } }
-.refused {
-  animation: wiggle 5s 1; }
-
-@keyframes wiggle {
-  0% {
-    background-color: red; }
-  100% {
-    background-color: black; } }
 .read-more-btn {
   margin-top: 30px;
   width: 170px;
@@ -300,6 +284,69 @@ FAQ Section
     cursor: pointer;
     background: transparent;
     color: #1a1a1a; }
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #1a1a1a;
+  font-size: 30px;
+  position: absolute;
+  top: 5%;
+  left: 90%; }
+  .close-btn:hover {
+    cursor: pointer; }
+
+.enabeld {
+  animation: colorChange 2s infinite; }
+
+@keyframes colorChange {
+  0% {
+    background-color: blue; }
+  100% {
+    background-color: black; } }
+.refused {
+  animation: wiggle 5s 1; }
+
+@keyframes wiggle {
+  0% {
+    background-color: red; }
+  100% {
+    background-color: black; } }
+.form-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100vh;
+  transition: opacity 2s ease-in-out;
+  display: none;
+  opacity: 0; }
+
+.opacity {
+  opacity: 1; }
+
+.display {
+  display: block; }
+
+.form-container {
+  position: absolute;
+  background: #ffffff;
+  top: 100vh;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  text-align: center;
+  padding: 70px 10px;
+  box-sizing: border-box;
+  transition: top 0.5s ease-in-out; }
+
+.slide {
+  top: 20%; }
+
+.form textarea {
+  width: 80%;
+  height: 200px; }
 
 .modal-wrapper {
   position: fixed;
