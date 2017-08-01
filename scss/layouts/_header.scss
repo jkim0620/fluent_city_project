@@ -1,0 +1,14 @@
+.header-container {
+  width: 100%;
+  overflow: hidden;
+  .header-img {
+    width: 650px;
+    margin-left: -60px;
+  }
+  .header-logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 120px;
+  }
+}

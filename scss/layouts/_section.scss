@@ -1,0 +1,121 @@
+/*
+=======================
+Contact Info Section
+=======================
+*/
+
+.contact-info-container {
+  width: 100%;
+  margin-top: -5px;
+}
+
+.contact-title {
+  padding: 35px;
+  background: $yellow;
+  text-align: center;
+  h1 {
+    margin: 0;
+  }
+}
+
+.contact-info-box {
+  width: 100%;
+  padding: 5px 20px 30px 20px;
+  box-sizing: border-box;
+}
+
+.info-box {
+  // width: 100%;
+  // .info-font {
+  //   color: $vivid-pink;
+  //   margin-left: 20px;
+  // }
+
+}
+
+.info-button {
+  margin: 0 auto;
+  @include button-style(80%, 50px, 4px, 20px, $black, $white);
+  margin-top: 20px;
+  padding-top: 10px;
+  a {
+    color: $white;
+  }
+  i {
+    margin-right: 20px;
+  }
+}
+
+.sns-icon-box {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  .icon-bullet {
+    margin: 0 auto;
+    margin: 10px;
+    i {
+      margin-top: 5px;
+    }
+  }
+}
+
+/*
+=======================
+Send Message Section
+=======================
+*/
+
+.send-message-section {
+  width: 100%;
+  height: 200px;
+  background: $yellow;
+}
+
+
+/*
+=======================
+Team Info Section
+=======================
+*/
+
+.team-section {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.team-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.member-box {
+  margin-top: 50px;
+  .member-img {
+    width: 150px;
+  }
+  h2 {
+    margin-bottom: 5px;
+  }
+  p {
+    margin-top: 5px;
+  }
+}
+
+/*
+=======================
+FAQ Section
+=======================
+*/
+
+.faq-section {
+  width: 100%;
+  padding: 50px;
+  box-sizing: border-box;
+  background: $light-gray;
+}
+
+.faq-container {
+  width: 90%;
+  margin: 0 auto;
+}

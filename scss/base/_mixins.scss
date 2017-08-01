@@ -17,3 +17,16 @@
     cursor: pointer;
   }
 }
+
+@mixin circle($size, $color) {
+  width: $size;
+  height: $size;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background: $color;
+  text-align: center;
+  box-sizing: border-box;
+}

@@ -1,0 +1,7 @@
+.icon-bullet {
+  @include circle(25px, $black);
+  i {
+    color: $white;
+  }
+  margin-bottom: 10px;
+}

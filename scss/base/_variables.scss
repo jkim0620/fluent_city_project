@@ -8,7 +8,7 @@ Base Color
 $white: #ffffff;
 $black: #0b0b0b;
 $extra-light-gray: #eeedf2;
-$light-gray: #6d7271;
+$light-gray: #F8F8F8;
 $mid-gray: #232323;
 $deep-gray: #1b1d21;
 $shadow: #c4c2c2;
@@ -16,7 +16,9 @@ $editor-bg-gray: #1e2430;
 $editor-bg-gray-shadow: #303a4c;
 $dove: #d9d9d9;
 
-$red: #fc0043;
+$red: #F92116;
+$yellow: #ECFF3C;
+$vivid-pink: #fb0d57;
 $orange: #f96d4d;
 $vivid-orange: #fc4b23;
 $blue: #0283ce;
@@ -32,11 +34,7 @@ $pastel-green: #89F8EA;
 $deep-pastel-green: #42f4ce;
 $deeper-pastel-green: #38f7dd;
 $bright-blue: #1BC9EA;
-$red: #F92116;
-
-// Color Scheme
-$primary-color: $pastel-green;
-$secondary-color: $red;
+$light-blue: #A3F0FF;
 
 
 /*
@@ -50,7 +48,8 @@ $base-font-size: 15px;
 $bold-font-size: 17px;
 
 // Main Font Style
-$primary-font-family: "Roboto", "sans-serif";
+$primary-font-family: "impact", "avenir", "sans-serif";
+$secondary-font-family: "Roboto", "sans-serif";
 
 // // Default Font Style
 // $default-font-family: "Avenir", "Helvetica", "sans-serif";
