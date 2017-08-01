@@ -6,7 +6,7 @@
   -ms-border-radius: $border-radius;
   -o-border-radius: $border-radius;
   border-radius: $border-radius;
-  border: none;
+  border: 2px solid $bg-color;
   padding: 7px 15px;
   text-align: center;
   font-weight: bold;
@@ -15,6 +15,8 @@
   background: $bg-color;
   &:hover {
     cursor: pointer;
+    background: transparent;
+    color: $bg-color;
   }
 }
 
@@ -29,4 +31,5 @@
   background: $color;
   text-align: center;
   box-sizing: border-box;
+  border: 2px solid $color;
 }

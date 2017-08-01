@@ -29,3 +29,8 @@
     background-color: black;
   }
 }
+
+.read-more-btn {
+  margin-top: 30px;
+  @include button-style(170px, 40px, 4px, 15px, $black, $white);
+}

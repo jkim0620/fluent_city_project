@@ -6,21 +6,24 @@ Contact Info Section
 
 .contact-info-container {
   width: 100%;
-  margin-top: -5px;
+  margin-top: -60px;
+  background: $accent-green;
 }
 
 .contact-title {
-  padding: 35px;
-  background: $yellow;
+  padding: 35px 35px 0 35px;
   text-align: center;
   h1 {
     margin: 0;
+  }
+  .contact-subtitle {
+    display: none;
   }
 }
 
 .contact-info-box {
   width: 100%;
-  padding: 5px 20px 30px 20px;
+  padding: 20px 20px 30px 20px;
   box-sizing: border-box;
 }
 
@@ -35,14 +38,19 @@ Contact Info Section
 
 .info-button {
   margin: 0 auto;
-  @include button-style(80%, 50px, 4px, 20px, $black, $white);
-  margin-top: 20px;
-  padding-top: 10px;
+  @include button-style(80%, 40px, 4px, 18px, $black, $white);
+  margin-top: 30px;
+  padding-top: 0px;
   a {
     color: $white;
   }
   i {
     margin-right: 20px;
+  }
+  &:hover{
+    a {
+      color: $black;
+    }
   }
 }
 
@@ -54,7 +62,13 @@ Contact Info Section
     margin: 0 auto;
     margin: 10px;
     i {
-      margin-top: 5px;
+      margin-top: 2px;
+    }
+    &:hover {
+      background: transparent;
+      i {
+        color: $black;
+      }
     }
   }
 }
@@ -67,8 +81,8 @@ Send Message Section
 
 .send-message-section {
   width: 100%;
-  height: 200px;
-  background: $yellow;
+  height: 300px;
+  background: $light-blue;
 }
 
 
@@ -86,6 +100,7 @@ Team Info Section
 
 .team-container {
   margin: 0 auto;
+  width: 90%;
   text-align: center;
 }
 
@@ -110,12 +125,106 @@ FAQ Section
 
 .faq-section {
   width: 100%;
-  padding: 50px;
+  padding: 50px 20px 100px 20px;
   box-sizing: border-box;
   background: $light-gray;
 }
 
 .faq-container {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  p {
+    text-align: justify;
+  }
+}
+
+.faq-right {
+  display: none;
+}
+
+.faq-q {
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+// Media Query for tablet size and wider
+@media screen and (min-width: 650px) {
+  .contact-info-container {
+    display: flex;
+    box-sizing: border-box;
+    .contact-title {
+      padding: 70px;
+      flex: 1;
+      text-align: right;
+      h1 {
+        font-size: 50px;
+      }
+      .contact-subtitle {
+        margin-top: 40px;
+        margin-left: 70px;
+        display: block;
+        font-size: 15px;
+        line-height: 23px;
+      }
+    }
+    .contact-info-box {
+      flex: 1;
+      text-align: left;
+      background: $white;
+    }
+  }
+  //
+  // .contact-info-container {
+  //   width: 80%;
+  //   margin: 0 auto;
+  //   margin-top: -100px;
+  //   z-index: 1000;
+  // }
+
+  .sns-icon-box {
+    padding-left: 40px;
+    justify-content: left;
+  }
+
+  .team-section {
+    padding-top: 70px;
+  }
+
+  .team-container {
+    padding-bottom: 70px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .member-box {
+    flex: 1;
+    margin-right: 50px;
+    margin-left: 30px;
+    .member-img {
+      width: 220px;
+    }
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .faq-container {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  .faq-right {
+    display: block;
+    flex: 1;
+    margin: 10px 40px 10px 40px;
+  }
+
+  .faq-left {
+    flex: 1;
+    margin: 20px;
+  }
 }

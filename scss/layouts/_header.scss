@@ -1,14 +1,32 @@
 .header-container {
-  width: 100%;
+  width: auto;
+  height: 360px;
   overflow: hidden;
-  .header-img {
-    width: 650px;
-    margin-left: -60px;
-  }
+  // .header-img {
+  //   width: 710px;
+  //   margin-left: -60px;
+  // }
+  background: url("../img/fluent_city_header7.jpg");
+  background-size: auto;
+  background-position-x: 30%;
+  // background-position-y: -10%;
+  background-repeat: no-repeat;
   .header-logo {
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 120px;
+    width: 140px;
+  }
+}
+
+// Media Query for tablet size and wider
+@media screen and (min-width: 650px) {
+  .header-container {
+    height: 500px;
+    background-size: cover;
+    // .header-img {
+    //   width: inherit;
+    //   margin-left: 0;
+    // }
   }
 }

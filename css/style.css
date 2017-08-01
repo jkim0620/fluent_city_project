@@ -15,7 +15,6 @@ body {
   box-sizing: border-box; }
 
 h1 {
-  margin: 10px;
   font-weight: 900;
   font-size: 30px;
   font-family: "Roboto", "sans-serif"; }
@@ -31,16 +30,21 @@ h3 {
   font-family: "Roboto", "sans-serif"; }
 
 p {
-  margin: 10px;
   font-family: "Roboto", "sans-serif"; }
 
 a {
   text-decoration: none;
-  color: #0b0b0b; }
+  color: #1a1a1a; }
 
 a:visited {
   text-decoration: none;
-  color: #0b0b0b; }
+  color: #1a1a1a; }
+
+.footer-section {
+  width: 100%;
+  height: 300px;
+  background: #1a1a1a;
+  color: #ffffff; }
 
 /*
 =======================
@@ -49,44 +53,50 @@ Contact Info Section
 */
 .contact-info-container {
   width: 100%;
-  margin-top: -5px; }
+  margin-top: -60px;
+  background: #46f992; }
 
 .contact-title {
-  padding: 35px;
-  background: #ECFF3C;
+  padding: 35px 35px 0 35px;
   text-align: center; }
   .contact-title h1 {
     margin: 0; }
+  .contact-title .contact-subtitle {
+    display: none; }
 
 .contact-info-box {
   width: 100%;
-  padding: 5px 20px 30px 20px;
+  padding: 20px 20px 30px 20px;
   box-sizing: border-box; }
 
 .info-button {
   margin: 0 auto;
   width: 80%;
-  height: 50px;
+  height: 40px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  border: none;
+  border: 2px solid #1a1a1a;
   padding: 7px 15px;
   text-align: center;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   color: #ffffff;
-  background: #0b0b0b;
-  margin-top: 20px;
-  padding-top: 10px; }
+  background: #1a1a1a;
+  margin-top: 30px;
+  padding-top: 0px; }
   .info-button:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    background: transparent;
+    color: #1a1a1a; }
   .info-button a {
     color: #ffffff; }
   .info-button i {
     margin-right: 20px; }
+  .info-button:hover a {
+    color: #1a1a1a; }
 
 .sns-icon-box {
   margin-top: 70px;
@@ -96,7 +106,11 @@ Contact Info Section
     margin: 0 auto;
     margin: 10px; }
     .sns-icon-box .icon-bullet i {
-      margin-top: 5px; }
+      margin-top: 2px; }
+    .sns-icon-box .icon-bullet:hover {
+      background: transparent; }
+      .sns-icon-box .icon-bullet:hover i {
+        color: #1a1a1a; }
 
 /*
 =======================
@@ -105,8 +119,8 @@ Send Message Section
 */
 .send-message-section {
   width: 100%;
-  height: 200px;
-  background: #ECFF3C; }
+  height: 300px;
+  background: #b6f8ff; }
 
 /*
 =======================
@@ -120,6 +134,7 @@ Team Info Section
 
 .team-container {
   margin: 0 auto;
+  width: 90%;
   text-align: center; }
 
 .member-box {
@@ -138,26 +153,97 @@ FAQ Section
 */
 .faq-section {
   width: 100%;
-  padding: 50px;
+  padding: 50px 20px 100px 20px;
   box-sizing: border-box;
-  background: #F8F8F8; }
+  background: #f3f3f3; }
 
 .faq-container {
-  width: 90%;
+  width: 80%;
   margin: 0 auto; }
+  .faq-container h1 {
+    text-align: center;
+    margin-bottom: 30px; }
+  .faq-container p {
+    text-align: justify; }
 
+.faq-right {
+  display: none; }
+
+.faq-q {
+  margin-top: 40px;
+  font-weight: bold; }
+
+@media screen and (min-width: 650px) {
+  .contact-info-container {
+    display: flex;
+    box-sizing: border-box; }
+    .contact-info-container .contact-title {
+      padding: 70px;
+      flex: 1;
+      text-align: right; }
+      .contact-info-container .contact-title h1 {
+        font-size: 50px; }
+      .contact-info-container .contact-title .contact-subtitle {
+        margin-top: 40px;
+        margin-left: 70px;
+        display: block;
+        font-size: 15px;
+        line-height: 23px; }
+    .contact-info-container .contact-info-box {
+      flex: 1;
+      text-align: left;
+      background: #ffffff; }
+
+  .sns-icon-box {
+    padding-left: 40px;
+    justify-content: left; }
+
+  .team-section {
+    padding-top: 70px; }
+
+  .team-container {
+    padding-bottom: 70px;
+    display: flex;
+    flex-wrap: wrap; }
+
+  .member-box {
+    flex: 1;
+    margin-right: 50px;
+    margin-left: 30px; }
+    .member-box .member-img {
+      width: 220px; } }
+@media screen and (min-width: 950px) {
+  .faq-container {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 60px; }
+
+  .faq-right {
+    display: block;
+    flex: 1;
+    margin: 10px 40px 10px 40px; }
+
+  .faq-left {
+    flex: 1;
+    margin: 20px; } }
 .header-container {
-  width: 100%;
-  overflow: hidden; }
-  .header-container .header-img {
-    width: 650px;
-    margin-left: -60px; }
+  width: auto;
+  height: 360px;
+  overflow: hidden;
+  background: url("../img/fluent_city_header7.jpg");
+  background-size: auto;
+  background-position-x: 30%;
+  background-repeat: no-repeat; }
   .header-container .header-logo {
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 120px; }
+    width: 140px; }
 
+@media screen and (min-width: 650px) {
+  .header-container {
+    height: 500px;
+    background-size: cover; } }
 .open-btn, .send-btn {
   width: 100px;
   height: 40px;
@@ -166,15 +252,17 @@ FAQ Section
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
   border-radius: 2px;
-  border: none;
+  border: 2px solid #1a1a1a;
   padding: 7px 15px;
   text-align: center;
   font-weight: bold;
   font-size: 15px;
   color: #ffffff;
-  background: #0b0b0b; }
+  background: #1a1a1a; }
   .open-btn:hover, .send-btn:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    background: transparent;
+    color: #1a1a1a; }
 
 .enabeld {
   animation: colorChange 2s infinite; }
@@ -192,6 +280,27 @@ FAQ Section
     background-color: red; }
   100% {
     background-color: black; } }
+.read-more-btn {
+  margin-top: 30px;
+  width: 170px;
+  height: 40px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: 2px solid #1a1a1a;
+  padding: 7px 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  color: #ffffff;
+  background: #1a1a1a; }
+  .read-more-btn:hover {
+    cursor: pointer;
+    background: transparent;
+    color: #1a1a1a; }
+
 .modal-wrapper {
   position: fixed;
   top: 0;
@@ -211,9 +320,10 @@ FAQ Section
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
-  background: #0b0b0b;
+  background: #1a1a1a;
   text-align: center;
   box-sizing: border-box;
+  border: 2px solid #1a1a1a;
   margin-bottom: 10px; }
   .icon-bullet i {
     color: #ffffff; }
