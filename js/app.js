@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // let openFormBtn = document.getElementById("open-form");
   let modal = document.getElementById("modal");
   let formBg = document.getElementById("form-bg");
+  let formContainer = document.getElementById("form-container");
   let form = document.getElementById("form");
   let openForm = document.getElementById("open-form-btn");
   let sendBtn = document.getElementById("sendBtn");
@@ -14,16 +15,17 @@ document.addEventListener("DOMContentLoaded", () => {
     formBg.classList.toggle("display");
     formBg.classList.toggle("opacity");
     setTimeout(function() {
-      form.classList.toggle("slide");
+      formContainer.classList.toggle("slide");
     }, 100);
   });
 
   // Close form with slide up effect
   closeBtn.addEventListener("click", () => {
-    form.classList.toggle("slide");
+    formContainer.classList.toggle("slide");
     formBg.classList.toggle("opacity");
     setTimeout(function() {
       formBg.classList.toggle("display");
+      form.reset();
   }, 500);
   });
 
