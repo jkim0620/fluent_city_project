@@ -10,6 +10,7 @@ Base Font
 */
 body {
   font-family: "Roboto", "sans-serif";
+  color: #1a1a1a;
   padding: 0;
   margin: 0;
   box-sizing: border-box; }
@@ -169,6 +170,9 @@ FAQ Section
 .faq-right {
   display: none; }
 
+.hidden-faq {
+  display: none; }
+
 .faq-q {
   margin-top: 40px;
   font-weight: bold; }
@@ -225,7 +229,10 @@ FAQ Section
 
   .faq-left {
     flex: 1;
-    margin: 20px; } }
+    margin: 20px; }
+
+  .read-more-btn {
+    display: none; } }
 .header-container {
   width: auto;
   height: 360px;
@@ -252,17 +259,28 @@ FAQ Section
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
   border-radius: 2px;
-  border: 2px solid #1a1a1a;
+  border: 2px solid #bcbcbc;
   padding: 7px 15px;
   text-align: center;
   font-weight: bold;
   font-size: 15px;
-  color: #ffffff;
-  background: #1a1a1a; }
+  color: #5b5a59;
+  background: #bcbcbc; }
   .send-btn:hover {
     cursor: pointer;
     background: transparent;
-    color: #1a1a1a; }
+    color: #bcbcbc; }
+  .send-btn:hover {
+    background: #bcbcbc;
+    color: #5b5a59; }
+
+.hidden-btn-bg {
+  transform: scaleX(0);
+  z-index: -1;
+  color: #ffffff;
+  background: #F92116;
+  transform-origin: 0 50%;
+  transition: transform 0.5s ease; }
 
 .read-more-btn {
   margin-top: 30px;
@@ -295,23 +313,22 @@ FAQ Section
   left: 90%; }
   .close-btn:hover {
     cursor: pointer; }
+  .close-btn:focus {
+    outline: none; }
 
 .enabeld {
-  animation: colorChange 2s infinite; }
-
-@keyframes colorChange {
-  0% {
-    background-color: blue; }
-  100% {
-    background-color: black; } }
-.refused {
-  animation: wiggle 5s 1; }
+  transform: scaleX(1); }
 
 @keyframes wiggle {
-  0% {
-    background-color: red; }
-  100% {
-    background-color: black; } }
+  from, to {
+    transform: translateX(0); }
+  10%, 40%, 70%, 100% {
+    transform: translateX(-10px); }
+  25%, 55%, 85% {
+    transform: translateX(10px); } }
+.error {
+  animation: wiggle 0.7s 1; }
+
 .form-wrapper {
   position: fixed;
   top: 0;

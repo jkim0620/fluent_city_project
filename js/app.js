@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Content loaded!");
 
-  // let openFormBtn = document.getElementById("open-form");
-  let modal = document.getElementById("modal");
+  // Variables for DOM elements
   let formBg = document.getElementById("form-bg");
   let formContainer = document.getElementById("form-container");
   let form = document.getElementById("form");
   let openForm = document.getElementById("open-form-btn");
   let sendBtn = document.getElementById("sendBtn");
   let closeBtn = document.getElementById("closeBtn");
+  let readMoreBtn = document.getElementById("read-more-btn");
 
-  // Open form with slide up effect
+  // Function to open form with slide up effect
   openForm.addEventListener("click", () => {
     formBg.classList.toggle("display");
     formBg.classList.toggle("opacity");
@@ -19,13 +19,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 100);
   });
 
-  // Close form with slide up effect
+  // Function to close form with slide up effect
   closeBtn.addEventListener("click", () => {
     formContainer.classList.toggle("slide");
     formBg.classList.toggle("opacity");
+
+    // Reset form and button to original state
     setTimeout(function() {
       formBg.classList.toggle("display");
       form.reset();
+      sendBtn.classList.remove("hidden-btn-bg");
+      sendBtn.classList.remove("enabled");
   }, 500);
   });
 
@@ -41,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (messageForm.name.value && messageForm.email.value && messageForm.message.value) {
       // IF yes, add a class to the button that triggers an animation that let's the user know that button is ready to be clicked
       // alert("Form ready to submit");
+      sendBtn.classList.add("hidden-btn-bg");
       sendBtn.classList.add("enabeld");
     }
   }
@@ -49,17 +54,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const animateError = (e) => {
     // IF form has empty field, add a class that animates accordingly
     if (!messageForm.name.value || !messageForm.email.value || !messageForm.message.value) {
-      sendBtn.classList.add("refused");
+      sendBtn.classList.add("error");
 
       // Remove animation
-      setTimeout(function() {
-        sendBtn.classList.remove("refused");
-    }, 1000);
+      setTimeout(() => {
+        sendBtn.classList.remove("error");
+      }, 1000);
     }
+
+    // Reset button to original state
+    sendBtn.classList.remove("hidden-btn-bg");
+    sendBtn.classList.remove("enabled");
   }
 
+  // Function to trigger animateError onclick of send button
   sendBtn.addEventListener("click", animateError);
 
+  // Invoke validateForm function
   validateForm();
 
 

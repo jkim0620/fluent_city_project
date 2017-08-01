@@ -144,12 +144,18 @@ FAQ Section
 
 .faq-right {
   display: none;
+  // transition:
+}
+
+.hidden-faq {
+  display: none;
 }
 
 .faq-q {
   margin-top: 40px;
   font-weight: bold;
 }
+
 
 // Media Query for tablet size and wider
 @media screen and (min-width: 650px) {
@@ -226,5 +232,9 @@ FAQ Section
   .faq-left {
     flex: 1;
     margin: 20px;
+  }
+
+  .read-more-btn {
+    display: none;
   }
 }
