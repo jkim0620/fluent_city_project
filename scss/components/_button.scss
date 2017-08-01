@@ -4,15 +4,14 @@
     background: $gray;
     color: $mid-gray;
   }
+  border: none;
+  box-shadow: inset 0 0 0 0 $red;
+  transition: all 0.7s ease;
 }
 
-.hidden-btn-bg {
-  transform: scaleX(0);
-  z-index: -1;
+.slide-bg {
+  box-shadow: inset 100px 0 0 0 $red;
   color: $white;
-  background: $red;
-  transform-origin: 0 50%;
-  transition: transform 0.5s ease;
 }
 
 .read-more-btn {
@@ -35,12 +34,6 @@
     outline: none;
   }
 }
-
-// Animation that should be triggered when send-button is ready to be cliked
-.enabeld {
-  transform: scaleX(1);
-}
-
 
 // Animation for a button to show error
 @keyframes wiggle {

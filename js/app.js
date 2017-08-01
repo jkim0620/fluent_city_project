@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (messageForm.name.value && messageForm.email.value && messageForm.message.value) {
       // IF yes, add a class to the button that triggers an animation that let's the user know that button is ready to be clicked
       // alert("Form ready to submit");
-      sendBtn.classList.add("hidden-btn-bg");
-      sendBtn.classList.add("enabeld");
+      sendBtn.classList.add("slide-bg");
+      // sendBtn.classList.add("enabeld");
     }
   }
 
