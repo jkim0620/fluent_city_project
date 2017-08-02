@@ -16,14 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let faqBtn = document.getElementById("faq-btn");
   let readMoreBtn = document.getElementById("read-more-btn");
 
-  // Function to open form with slide up effect
-  openForm.addEventListener("click", () => {
-    formBg.classList.toggle("display");
-    formBg.classList.toggle("opacity");
-    setTimeout(() => {
-      optionContainer.classList.toggle("slide");
-    }, 100);
-  });
 
   // Reusable function to reset and close form
   const closeAndResetForm = () => {
@@ -69,6 +61,16 @@ document.addEventListener("DOMContentLoaded", () => {
   clickCloseBtn(closeBtn);
 
 
+  // ON CLICK of button, open form with slide up effect
+  openForm.addEventListener("click", () => {
+    formBg.classList.toggle("display");
+    formBg.classList.toggle("opacity");
+    setTimeout(() => {
+      optionContainer.classList.toggle("slide");
+    }, 100);
+  });
+
+
   // Function to validate if radio button is checked and ready to continue
   const validateOption = () => {
     // ON CLICK of radio buttion
@@ -102,32 +104,32 @@ document.addEventListener("DOMContentLoaded", () => {
     // ON CHANGE of the form
     form.addEventListener("input", () => {
       if (form.name.value && form.message.value && form.email.value.includes("@")) {
-        // IF yes, add a class to the button that triggers an animation that let's the user know that button is ready to be clicked
+        // Add a class to the button that triggers an animation that let's the user know button is ready to be clicked
         slideInAnimation(sendBtn);
       }
-
     });
 
-    // Function to trigger animateError onclick of send button
+    // ON CLICK of send button
     sendBtn.addEventListener("click", (e) => {
       e.preventDefault();
-
+      // IF form is not completed
       if (!form.name.value || !form.email.value.includes("@") || !form.message.value) {
+        // Let user know button is not clickable with a wiggleAnimation
         wiggleAnimation(sendBtn);
       } else {
+        // IF form is ready to be submitted, open confirm-message
         confirmContainer.classList.toggle("slide");
+        // and after 3seconds close the entire form
         setTimeout(() => {
           closeAndResetForm();
         }, 3000);
       }
 
-      console.log(form.name.value);
+      // SAVE user's name and show on 'confirm-message' section
       document.getElementById("user-name").innerHTML = `${form.name.value}`;
-      // sendBtn.classList.remove("slide-bg");
     });
 
     sendBtn.classList.remove("slide-bg");
-
   } // End of validateForm function
 
   validateForm();

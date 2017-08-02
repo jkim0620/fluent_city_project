@@ -1,3 +1,29 @@
+/*
+=========================
+BUTTONS
+=========================
+*/
+
+
+// SNS icons
+.icon-bullet {
+  @include circle(25px, $black);
+  i {
+    color: $white;
+  }
+  margin-bottom: 10px;
+}
+
+// Button that links to FAQ section
+.faq-btn {
+  @include readyToSlide($accent-pink);
+  &:hover {
+    @include slideToTop(-100px, $accent-pink);
+    cursor: pointer;
+  }
+}
+
+// Button for contact now section
 .contact-button {
   margin: 0 auto;
   margin-bottom: 30px;
@@ -12,15 +38,7 @@
   }
 }
 
-
-.faq-btn {
-  @include readyToSlide($accent-pink);
-  &:hover {
-    @include slideToTop(-100px, $accent-pink);
-    cursor: pointer;
-  }
-}
-
+// Buttons on the form
 .send-btn, .continue-btn {
   @include button-style(200px, 60px, 2px, 15px, $white, $mid-gray);
   @include border-bottom($gray, 5px);
@@ -34,21 +52,6 @@
   &:hover {
     color: $white;
   }
-}
-
-.read-more-btn {
-  margin-top: 30px;
-  @include button-style(170px, 50px, 4px, 15px, $gray, $white);
-  @include border-bottom($mid-gray, 5px);
-  @include readyToSlide($black);
-  &:hover {
-    @include slideToTop(170px, $black);
-    border-bottom-color: $black;
-  }
-}
-
-.show-more {
-  display: block;
 }
 
 .close-btn {
@@ -71,6 +74,23 @@
   color: $gray;
 }
 
+
+// Read more button from FAQ section
+.read-more-btn {
+  margin-top: 30px;
+  @include button-style(170px, 50px, 4px, 15px, $gray, $white);
+  @include border-bottom($mid-gray, 5px);
+  @include readyToSlide($black);
+  &:hover {
+    @include slideToTop(170px, $black);
+    border-bottom-color: $black;
+  }
+}
+
+.show-more {
+  display: block;
+}
+
 // Animation for a button to show error
 @keyframes wiggle {
   from, to {
@@ -90,7 +110,7 @@
   animation: wiggle 0.7s 1;
 }
 
-// Media Query for tablet size and wider
+// Media Query for tablet and wider
 @media screen and (min-width: 650px) {
   .contact-button {
     width: 45%;

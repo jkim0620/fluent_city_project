@@ -1,3 +1,9 @@
+/*
+=====================================
+ Reusable Mixin for button/div styling
+ =====================================
+ */
+
 @mixin button-style($width, $height, $border-radius, $font-size, $bg-color, $font-color) {
   width: $width;
   height: $height;
@@ -22,6 +28,10 @@
 }
 
 @mixin border-bottom($color, $size) {
+  -webkit-border-bottom: $color $size solid;
+  -moz-border-bottom: $color $size solid;
+  -ms-border-bottom: $color $size solid;
+  -o-border-bottom: $color $size solid;
   border-bottom: $color $size solid;
 }
 
@@ -39,15 +49,25 @@
   border: 2px solid $color;
 }
 
+
+/*
+=====================================
+ Mixin for background slideIn Effect
+=====================================
+*/
+
+ // Foundation for slideIn transition
 @mixin readyToSlide($color) {
   box-shadow: inset 0 0 0 0 $color;
   transition: all 0.7s ease;
 }
 
+// ON hover or click, trigger slideIn from left to right
 @mixin slideToRight($size, $color) {
   box-shadow: inset $size 0 0 0 $color;
 }
 
+// ON hover or click, trigger slideIn from bottom to top
 @mixin slideToTop($size, $color) {
   box-shadow: inset 0 $size 0 0  $color;
 }

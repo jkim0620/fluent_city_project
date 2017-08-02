@@ -11,9 +11,7 @@ Contact Info Section
 
 .contact-info-container {
   width: 100%;
-  // margin-top: -60px;
   margin-top: 30px;
-  // background: $accent-green;
   background: $white;
 }
 
@@ -43,7 +41,6 @@ Contact Info Section
 
 .info-title {
   margin-top: 30px;
-  // width: 60%;
   @include button-style(auto, auto, 3px, 17px, $light-gray, $black);
   text-align: left;
   &:hover {
@@ -85,7 +82,7 @@ Contact Info Section
 
 /*
 =======================
-Send Message Section
+Contact Now Section
 =======================
 */
 
@@ -93,7 +90,6 @@ Send Message Section
   width: 100%;
   padding: 70px 50px;
   background: $light-blue;
-  // background: $accent-pink;
 }
 
 
@@ -159,8 +155,6 @@ FAQ Section
 .hidden-faq {
   display: none;
 }
-
-
 
 .faq-q {
   margin-top: 40px;

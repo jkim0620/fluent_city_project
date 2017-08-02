@@ -46,14 +46,29 @@ a:visited {
   text-decoration: none;
   color: #1a1a1a; }
 
+/*
+=====================================
+ Reusable Mixin for button/div styling
+ =====================================
+ */
+/*
+=====================================
+ Mixin for background slideIn Effect
+=====================================
+*/
+/*
+=========================
+FOOTER
+=========================
+*/
 .footer-section {
   width: 100%;
-  height: 300px;
+  height: 170px;
   background: #1a1a1a;
   color: #ffffff; }
 
 .footer-container {
-  padding-top: 200px; }
+  padding-top: 100px; }
   .footer-container .sns-icon-box {
     margin-top: 0; }
   .footer-container .icon-bullet {
@@ -153,7 +168,7 @@ Contact Info Section
 
 /*
 =======================
-Send Message Section
+Contact Now Section
 =======================
 */
 .contact-now-section {
@@ -289,6 +304,11 @@ FAQ Section
 
   .read-more-btn {
     display: none; } }
+/*
+=========================
+HEADER
+=========================
+*/
 .header-container {
   width: auto;
   height: 360px;
@@ -305,6 +325,34 @@ FAQ Section
 @media screen and (min-width: 650px) {
   .header-container {
     height: 550px; } }
+/*
+=========================
+BUTTONS
+=========================
+*/
+.icon-bullet {
+  width: 25px;
+  height: 25px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background: #1a1a1a;
+  text-align: center;
+  box-sizing: border-box;
+  border: 2px solid #1a1a1a;
+  margin-bottom: 10px; }
+  .icon-bullet i {
+    color: #ffffff; }
+
+.faq-btn {
+  box-shadow: inset 0 0 0 0 #fb0d57;
+  transition: all 0.7s ease; }
+  .faq-btn:hover {
+    box-shadow: inset 0 -100px 0 0 #fb0d57;
+    cursor: pointer; }
+
 .contact-button {
   margin: 0 auto;
   margin-bottom: 30px;
@@ -322,6 +370,10 @@ FAQ Section
   font-size: 18px;
   color: #1a1a1a;
   background: #ffffff;
+  -webkit-border-bottom: #46f992 9px solid;
+  -moz-border-bottom: #46f992 9px solid;
+  -ms-border-bottom: #46f992 9px solid;
+  -o-border-bottom: #46f992 9px solid;
   border-bottom: #46f992 9px solid;
   box-shadow: inset 0 0 0 0 #46f992;
   transition: all 0.7s ease; }
@@ -333,13 +385,6 @@ FAQ Section
     margin-right: 20px; }
   .contact-button:hover {
     box-shadow: inset 0 -100px 0 0 #46f992; }
-
-.faq-btn {
-  box-shadow: inset 0 0 0 0 #fb0d57;
-  transition: all 0.7s ease; }
-  .faq-btn:hover {
-    box-shadow: inset 0 -100px 0 0 #fb0d57;
-    cursor: pointer; }
 
 .send-btn, .continue-btn {
   width: 200px;
@@ -356,6 +401,10 @@ FAQ Section
   font-size: 15px;
   color: #5b5a59;
   background: #ffffff;
+  -webkit-border-bottom: #bcbcbc 5px solid;
+  -moz-border-bottom: #bcbcbc 5px solid;
+  -ms-border-bottom: #bcbcbc 5px solid;
+  -o-border-bottom: #bcbcbc 5px solid;
   border-bottom: #bcbcbc 5px solid;
   box-shadow: inset 0 0 0 0 #1a1a1a;
   transition: all 0.7s ease; }
@@ -370,36 +419,6 @@ FAQ Section
   border-bottom-color: #1a1a1a; }
   .slide-bg:hover {
     color: #ffffff; }
-
-.read-more-btn {
-  margin-top: 30px;
-  width: 170px;
-  height: 50px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  border: none;
-  padding: 7px 15px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 15px;
-  color: #ffffff;
-  background: #bcbcbc;
-  border-bottom: #5b5a59 5px solid;
-  box-shadow: inset 0 0 0 0 #1a1a1a;
-  transition: all 0.7s ease; }
-  .read-more-btn:hover {
-    cursor: pointer; }
-  .read-more-btn:focus {
-    outline: none; }
-  .read-more-btn:hover {
-    box-shadow: inset 0 170px 0 0 #1a1a1a;
-    border-bottom-color: #1a1a1a; }
-
-.show-more {
-  display: block; }
 
 .close-btn {
   background: transparent;
@@ -417,6 +436,40 @@ FAQ Section
 #confirmCloseBtn {
   color: #bcbcbc; }
 
+.read-more-btn {
+  margin-top: 30px;
+  width: 170px;
+  height: 50px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: none;
+  padding: 7px 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  color: #ffffff;
+  background: #bcbcbc;
+  -webkit-border-bottom: #5b5a59 5px solid;
+  -moz-border-bottom: #5b5a59 5px solid;
+  -ms-border-bottom: #5b5a59 5px solid;
+  -o-border-bottom: #5b5a59 5px solid;
+  border-bottom: #5b5a59 5px solid;
+  box-shadow: inset 0 0 0 0 #1a1a1a;
+  transition: all 0.7s ease; }
+  .read-more-btn:hover {
+    cursor: pointer; }
+  .read-more-btn:focus {
+    outline: none; }
+  .read-more-btn:hover {
+    box-shadow: inset 0 170px 0 0 #1a1a1a;
+    border-bottom-color: #1a1a1a; }
+
+.show-more {
+  display: block; }
+
 @keyframes wiggle {
   from, to {
     transform: translateX(0); }
@@ -430,6 +483,11 @@ FAQ Section
 @media screen and (min-width: 650px) {
   .contact-button {
     width: 45%; } }
+/*
+=========================
+MODAL - FORM STYLE
+=========================
+*/
 .form-wrapper {
   position: fixed;
   top: 0;
@@ -459,14 +517,8 @@ FAQ Section
   overflow: scroll;
   transition: top 0.5s ease-in-out; }
 
-.confirm {
-  z-index: -10; }
-
 .slide {
   top: 20%; }
-
-.slideDown {
-  top: 100vh; }
 
 .form {
   margin: 0 auto; }
@@ -476,13 +528,19 @@ FAQ Section
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: 15px;
-    border: 3px #1a1a1a solid; }
+    border: none;
+    border-radius: 2px; }
+    .form textarea:focus {
+      background: #b6f8ff; }
   .form input {
     width: 80%;
-    padding: 10px 20px;
+    padding: 13px 20px;
     font-size: 15px;
     margin-top: 10px;
-    border: 3px #1a1a1a solid; }
+    border: none;
+    border-radius: 2px; }
+    .form input:focus {
+      background: #b6f8ff; }
   .form .input-label {
     width: 80%;
     margin: 0 auto;
@@ -501,9 +559,6 @@ FAQ Section
   .radio-form label {
     font-size: 18px;
     font-weight: bold; }
-
-.required-style {
-  color: #fb0d57; }
 
 hr {
   margin: 50px auto;
@@ -526,7 +581,7 @@ hr {
   .confirm-message h2 {
     line-height: 45px;
     font-weight: 500;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color: #bcbcbc;
     text-transform: uppercase; }
 
@@ -551,22 +606,11 @@ hr {
   .radio-form {
     margin-top: 70px;
     margin-bottom: 70px;
+    -webkit-border-bottom: #ffffff 2px solid;
+    -moz-border-bottom: #ffffff 2px solid;
+    -ms-border-bottom: #ffffff 2px solid;
+    -o-border-bottom: #ffffff 2px solid;
     border-bottom: #ffffff 2px solid;
     padding-bottom: 50px; } }
-.icon-bullet {
-  width: 25px;
-  height: 25px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  background: #1a1a1a;
-  text-align: center;
-  box-sizing: border-box;
-  border: 2px solid #1a1a1a;
-  margin-bottom: 10px; }
-  .icon-bullet i {
-    color: #ffffff; }
 
 /*# sourceMappingURL=style.css.map */

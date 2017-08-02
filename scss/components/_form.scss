@@ -1,3 +1,9 @@
+/*
+=========================
+MODAL - FORM STYLE
+=========================
+*/
+
 .form-wrapper {
   position: fixed;
   top: 0;
@@ -10,10 +16,12 @@
   opacity: 0;
 }
 
+// Toggle this class when opening and closing form-wrapper
 .opacity {
   opacity: 1;
 }
 
+// Toggle this class when opening and closing form-wrapper
 .display {
   display: block;
 }
@@ -31,18 +39,12 @@
   transition: top 0.5s ease-in-out;
 }
 
-.confirm {
-  z-index: -10;
-}
-
+// Toggle this class when opening and closing form-container
 .slide {
   top: 20%;
 }
 
-.slideDown {
-  top: 100vh;
-}
-
+// Style for form tag
 .form {
   margin: 0 auto;
   textarea {
@@ -51,16 +53,23 @@
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: 15px;
-    border: 3px $black solid;
+    border: none;
+    border-radius: 2px;
+    // border: 3px $black solid;
+    &:focus {
+      background: $light-blue;
+    }
   }
   input {
     width: 80%;
-    padding: 10px 20px;
+    padding: 13px 20px;
     font-size: 15px;
     margin-top: 10px;
-    border: 3px $black solid;
+    border: none;
+    border-radius: 2px;
+    // border: 3px $black solid;
     &:focus {
-      // background: $yellow;
+      background: $light-blue;
     }
   }
   .input-label {
@@ -74,6 +83,7 @@
   }
 }
 
+// Style for radio type input
 .radio-form {
   // text-align: left;
   input {
@@ -89,10 +99,7 @@
   margin-bottom: 50px;
 }
 
-.required-style {
-  color: $accent-pink;
-}
-
+// Line break
 hr {
   margin: 50px auto;
   width: 80%;
@@ -108,6 +115,7 @@ hr {
   background: $white;
 }
 
+// Thank you message at the last stage of form
 .confirm-message {
   margin: 0 auto;
   width: 70%;
@@ -118,21 +126,21 @@ hr {
   h2 {
     line-height: 45px;
     font-weight: 500;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color: $gray;
     text-transform: uppercase;
   }
 }
 
 
-// Media Query for tablet size and wider
+// Media Query for tablet and wider
 @media screen and (min-width: 650px) {
   .form {
     width: 60%;
   }
 }
 
-// Media Query for desktop size and wider
+// Media Query for desktop and wider
 @media screen and (min-width: 950px) {
   .input-wrapper {
     display: flex;
