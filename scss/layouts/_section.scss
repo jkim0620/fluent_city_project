@@ -161,6 +161,12 @@ FAQ Section
 }
 
 
+/*
+=======================
+Media Query
+=======================
+*/
+
 // Media Query for tablet size and wider
 @media screen and (min-width: 650px) {
   .contact-info-container {
@@ -217,6 +223,8 @@ FAQ Section
     }
   }
 }
+
+
 
 // Media Query for desktop size and wider
 @media screen and (min-width: 950px) {

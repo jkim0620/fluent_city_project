@@ -4,7 +4,6 @@ BUTTONS
 =========================
 */
 
-
 // SNS icons
 .icon-bullet {
   @include circle(25px, $black);
@@ -54,6 +53,25 @@ BUTTONS
   }
 }
 
+// Animation for a button to show error
+@keyframes wiggle {
+  from, to {
+    transform: translateX(0);
+  }
+
+  10%, 40%, 70%, 100% {
+    transform: translateX(-10px);
+  }
+
+  25%, 55%, 85% {
+    transform: translateX(10px);
+  }
+}
+
+.error {
+  animation: wiggle 0.7s 1;
+}
+
 .close-btn {
   background: transparent;
   border: none;
@@ -75,7 +93,7 @@ BUTTONS
 }
 
 
-// Read more button from FAQ section
+// ReadMore button from FAQ section
 .read-more-btn {
   margin-top: 30px;
   @include button-style(170px, 50px, 4px, 15px, $gray, $white);
@@ -91,24 +109,12 @@ BUTTONS
   display: block;
 }
 
-// Animation for a button to show error
-@keyframes wiggle {
-  from, to {
-    transform: translateX(0);
-  }
 
-  10%, 40%, 70%, 100% {
-    transform: translateX(-10px);
-  }
-
-  25%, 55%, 85% {
-    transform: translateX(10px);
-  }
-}
-
-.error {
-  animation: wiggle 0.7s 1;
-}
+/*
+=======================
+Media Query
+=======================
+*/
 
 // Media Query for tablet and wider
 @media screen and (min-width: 650px) {

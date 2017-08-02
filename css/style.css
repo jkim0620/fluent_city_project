@@ -84,6 +84,11 @@ FOOTER
 .footer-icon:hover i {
   color: #ffffff !important; }
 
+/*
+=======================
+Media Query
+=======================
+*/
 @media screen and (min-width: 650px) {
   .footer-container .sns-icon-box {
     -webkit-justify-content: center;
@@ -249,6 +254,11 @@ FAQ Section
   margin-top: 40px;
   font-weight: bold; }
 
+/*
+=======================
+Media Query
+=======================
+*/
 @media screen and (min-width: 650px) {
   .contact-info-container {
     display: -webkit-box;
@@ -382,6 +392,11 @@ HEADER
     left: 10px;
     width: 140px; }
 
+/*
+=======================
+Media Query
+=======================
+*/
 @media screen and (min-width: 650px) {
   .header-container {
     height: 550px; } }
@@ -480,6 +495,16 @@ BUTTONS
   .slide-bg:hover {
     color: #ffffff; }
 
+@keyframes wiggle {
+  from, to {
+    transform: translateX(0); }
+  10%, 40%, 70%, 100% {
+    transform: translateX(-10px); }
+  25%, 55%, 85% {
+    transform: translateX(10px); } }
+.error {
+  animation: wiggle 0.7s 1; }
+
 .close-btn {
   background: transparent;
   border: none;
@@ -530,16 +555,11 @@ BUTTONS
 .show-more {
   display: block; }
 
-@keyframes wiggle {
-  from, to {
-    transform: translateX(0); }
-  10%, 40%, 70%, 100% {
-    transform: translateX(-10px); }
-  25%, 55%, 85% {
-    transform: translateX(10px); } }
-.error {
-  animation: wiggle 0.7s 1; }
-
+/*
+=======================
+Media Query
+=======================
+*/
 @media screen and (min-width: 650px) {
   .contact-button {
     width: 45%; } }
@@ -649,6 +669,11 @@ hr {
     color: #bcbcbc;
     text-transform: uppercase; }
 
+/*
+=======================
+Media Query
+=======================
+*/
 @media screen and (min-width: 650px) {
   .form {
     width: 60%; } }

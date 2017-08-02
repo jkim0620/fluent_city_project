@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
   validateForm();
 
 
-  // Rerence: https://stackoverflow.com/questions/17733076/smooth-scroll-anchor-links-without-jquery
+  // Reference: https://stackoverflow.com/questions/17733076/smooth-scroll-anchor-links-without-jquery
   // Smooth Scroll Effect with pure JavaScript
   const scrollTo = (element, to, duration) => {
     if (duration <= 0) return;
