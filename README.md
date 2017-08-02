@@ -87,6 +87,15 @@ const wiggleAnimation = (el) => {
 }
 ```
 
+
+#### # Additional functionality
+* **Save user's input value** and print it on "confirm-message" section
+
+* **ONCLICK of FAQ button**, scrolls down to FAQ section
+* **READMORE button** on FAQ section for mobile view
+* **LOGO** links to Fluent City Website
+* **Links** to Email/Phone/SNS
+
 ---
 
 ## Design
