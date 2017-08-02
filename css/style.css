@@ -52,6 +52,22 @@ a:visited {
   background: #1a1a1a;
   color: #ffffff; }
 
+.footer-container {
+  padding-top: 200px; }
+  .footer-container .sns-icon-box {
+    margin-top: 0; }
+  .footer-container .icon-bullet {
+    border-color: #ffffff; }
+    .footer-container .icon-bullet i:hover {
+      color: #ffffff; }
+
+.footer-icon:hover i {
+  color: #ffffff !important; }
+
+@media screen and (min-width: 650px) {
+  .footer-container .sns-icon-box {
+    justify-content: center;
+    padding-left: 0; } }
 /*
 =======================
 Contact Info Section

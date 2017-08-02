@@ -4,3 +4,38 @@
   background: $black;
   color: $white;
 }
+
+.footer-container {
+  padding-top: 200px;
+
+  .sns-icon-box {
+    margin-top: 0;
+  }
+  .icon-bullet {
+    border-color: $white;
+    i {
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+.footer-icon {
+  &:hover {
+    i {
+      color: $white !important;
+    }
+  }
+}
+
+
+// Media Query for tablet size and wider
+@media screen and (min-width: 650px) {
+  .footer-container {
+    .sns-icon-box {
+      justify-content: center;
+      padding-left: 0;
+    }
+  }
+}
