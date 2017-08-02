@@ -21,11 +21,11 @@
     <!-- Link to main js -->
     <script src="./js/app.js"></script>
   </head>
-  <body>
 
+  <body>
+    <!-- Header Section -->
     <header>
       <div class="header-container">
-        <!-- <img class="header-img" src="./img/fluent_city_header7.jpg" alt=""> -->
         <a href="https://www.fluentcity.com/"><img class="header-logo" src="./img/fluent_city_logo_black.png" alt=""></a>
       </div>
     </header>
@@ -73,9 +73,6 @@
     <!-- Contact Now Section -->
     <section class="contact-now-section">
       <div class="contact-now-container">
-        <!-- <div>
-          <h1 class="title-style">CONNECT</h1>
-        </div> -->
         <div id="open-form-btn" class="contact-button">
           <p>SEND A MESSAGE</p>
         </div>
@@ -85,7 +82,7 @@
           </div>
         </a>
       </div>
-    </section> <!-- /Send Message Button Section -->
+    </section> <!-- /Contact Now Section -->
 
     <!-- Team Intro Section -->
     <section class="team-section">
@@ -101,7 +98,6 @@
           <h2>LAUREN</h2>
           <p>Enrollment Advisor</p>
         </div>
-
 
         <div class="member-box">
           <img class="member-img" src="./img/taminy-1.png" alt="">
@@ -167,13 +163,10 @@
     <!-- Hidden modal for form -->
     <section>
       <div id="form-bg" class="form-wrapper">
-
+        <!-- First page of form that contains radio buttons -->
         <div id="option-container" class="form-container">
           <button id="optionCloseBtn" class="close-btn" type="button" name="button"><i class="fa fa-times" aria-hidden="true"></i></button>
           <form id="option" class="form">
-            <!-- <div>
-              Is this a
-            </div> -->
             <div class="radio-form input-wrapper">
               <div class="input-flex">
                 <input id="option-general" type="radio" name="radio">
@@ -185,15 +178,14 @@
                 <label for="option-enrollment">ENROLLMENT INQUIRY</label>
               </div>
             </div>
-
             <button id="continueBtn" class="continue-btn">CONTINUE</button>
           </form>
         </div>
 
+        <!-- Second page of form that contains input fields -->
         <div id="form-container" class="form-container">
           <button id="closeBtn" class="close-btn" type="button" name="button"><i class="fa fa-times" aria-hidden="true"></i></button>
           <form id="form" class="form">
-
             <div class="input-wrapper">
               <div class="input-flex">
                 <div class="input-label">
@@ -212,7 +204,6 @@
                 </div>
               </div>
             </div>
-
             <div class="input-label">
               Message <span class="required-style">*</span>
             </div>
@@ -223,6 +214,7 @@
           </form>
         </div>
 
+        <!-- Last page of form  -->
         <div id="confirm-container" class="form-container">
           <button id="confirmCloseBtn" class="close-btn" type="button" name="button"><i class="fa fa-times" aria-hidden="true"></i></button>
           <div class="confirm-message">
