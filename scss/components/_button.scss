@@ -1,3 +1,21 @@
+.contact-button {
+  margin: 0 auto;
+  @include button-style(80%, 40px, 4px, 18px, $black, $white);
+  margin-bottom: 30px;
+  padding-top: 0px;
+  a {
+    color: $white;
+  }
+  i {
+    margin-right: 20px;
+  }
+  &:hover{
+    a {
+      color: $black;
+    }
+  }
+}
+
 .send-btn, .continue-btn {
   @include button-style(120px, 40px, 2px, 15px, $gray, $mid-gray);
   &:hover {

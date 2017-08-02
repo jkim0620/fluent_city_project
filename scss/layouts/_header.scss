@@ -2,15 +2,8 @@
   width: auto;
   height: 360px;
   overflow: hidden;
-  // .header-img {
-  //   width: 710px;
-  //   margin-left: -60px;
-  // }
   background: url("../img/fluent_city_header6.jpg");
   background-size: cover;
-  // background-size: auto;
-  // background-position-x: 30%;
-  // background-position-y: -10%;
   background-repeat: no-repeat;
   .header-logo {
     position: absolute;
@@ -24,10 +17,5 @@
 @media screen and (min-width: 650px) {
   .header-container {
     height: 550px;
-    background-size: cover;
-    // .header-img {
-    //   width: inherit;
-    //   margin-left: 0;
-    // }
   }
 }

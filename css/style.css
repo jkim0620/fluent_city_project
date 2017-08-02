@@ -54,52 +54,38 @@ Contact Info Section
 */
 .contact-info-container {
   width: 100%;
-  margin-top: -60px;
-  background: #46f992; }
+  margin-top: 30px;
+  background: #ffffff; }
 
 .contact-title {
-  padding: 35px 35px 0 35px;
-  text-align: center; }
+  text-align: left;
+  margin: 0 auto;
+  padding: 35px 55px 35px 35px;
+  width: 65%;
+  background: #fb0d57; }
   .contact-title h1 {
-    margin: 0; }
+    font-size: 38px;
+    margin: 0;
+    padding-bottom: 20px; }
   .contact-title .contact-subtitle {
-    display: none; }
+    font-size: 15px;
+    line-height: 22px;
+    color: #1a1a1a; }
 
 .contact-info-box {
-  width: 100%;
+  margin: 0 auto;
+  width: 90%;
   padding: 20px 20px 30px 20px;
   box-sizing: border-box; }
 
-.info-button {
-  margin: 0 auto;
-  width: 80%;
-  height: 40px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  border: 2px solid #1a1a1a;
-  padding: 7px 15px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 18px;
-  color: #ffffff;
-  background: #1a1a1a;
+.info-title {
   margin-top: 30px;
-  padding-top: 0px; }
-  .info-button:hover {
-    cursor: pointer;
-    background: transparent;
-    color: #1a1a1a; }
-  .info-button:focus {
-    outline: none; }
-  .info-button a {
-    color: #ffffff; }
-  .info-button i {
-    margin-right: 20px; }
-  .info-button:hover a {
-    color: #1a1a1a; }
+  border-bottom: #fb0d57 2px solid; }
+
+.info-content {
+  margin-bottom: 50px; }
+  .info-content p {
+    margin-left: 10px; }
 
 .sns-icon-box {
   margin-top: 70px;
@@ -120,9 +106,10 @@ Contact Info Section
 Send Message Section
 =======================
 */
-.send-message-section {
+.contact-now-section {
   width: 100%;
-  height: 300px;
+  box-sizing: border-box;
+  padding: 70px 50px;
   background: #b6f8ff; }
 
 /*
@@ -184,21 +171,26 @@ FAQ Section
     display: flex;
     box-sizing: border-box; }
     .contact-info-container .contact-title {
-      padding: 70px;
+      width: 500px;
+      height: 90%;
+      background: #fb0d57;
+      margin-top: -150px;
+      margin-left: 100px;
+      border-bottom: none;
+      padding: 50px;
       flex: 1;
-      text-align: right; }
+      text-align: right;
+      box-sizing: border-box; }
       .contact-info-container .contact-title h1 {
         font-size: 50px; }
       .contact-info-container .contact-title .contact-subtitle {
-        margin-top: 40px;
         margin-left: 70px;
-        display: block;
-        font-size: 15px;
-        line-height: 23px; }
+        width: 90%;
+        float: right; }
     .contact-info-container .contact-info-box {
       flex: 1;
       text-align: left;
-      background: #ffffff; }
+      padding-left: 20px; }
 
   .sns-icon-box {
     padding-left: 40px;
@@ -219,6 +211,17 @@ FAQ Section
     .member-box .member-img {
       width: 220px; } }
 @media screen and (min-width: 950px) {
+  .contact-info-container .contact-title {
+    margin-left: 150px; }
+  .contact-info-container .contact-subtitle {
+    width: 70%; }
+  .contact-info-container .contact-info-box {
+    margin-left: 100px;
+    flex: 2; }
+
+  .info-title {
+    width: 60%; }
+
   .faq-container {
     display: flex;
     padding-top: 40px;
@@ -255,8 +258,38 @@ FAQ Section
 
 @media screen and (min-width: 650px) {
   .header-container {
-    height: 550px;
-    background-size: cover; } }
+    height: 550px; } }
+.contact-button {
+  margin: 0 auto;
+  width: 80%;
+  height: 40px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: 2px solid #1a1a1a;
+  padding: 7px 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #ffffff;
+  background: #1a1a1a;
+  margin-bottom: 30px;
+  padding-top: 0px; }
+  .contact-button:hover {
+    cursor: pointer;
+    background: transparent;
+    color: #1a1a1a; }
+  .contact-button:focus {
+    outline: none; }
+  .contact-button a {
+    color: #ffffff; }
+  .contact-button i {
+    margin-right: 20px; }
+  .contact-button:hover a {
+    color: #1a1a1a; }
+
 .send-btn, .continue-btn {
   width: 120px;
   height: 40px;
@@ -378,17 +411,6 @@ FAQ Section
 .form textarea {
   width: 80%;
   height: 200px; }
-
-.modal-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #ffffff;
-  width: 100%;
-  height: 100vh;
-  z-index: 100;
-  padding-top: 150px;
-  display: none; }
 
 .icon-bullet {
   width: 25px;
