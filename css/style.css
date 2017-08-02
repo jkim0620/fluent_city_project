@@ -52,6 +52,10 @@ a:visited {
 Contact Info Section
 =======================
 */
+.title-style {
+  text-align: center;
+  margin-bottom: 70px; }
+
 .contact-info-container {
   width: 100%;
   margin-top: 30px;
@@ -80,12 +84,37 @@ Contact Info Section
 
 .info-title {
   margin-top: 30px;
-  border-bottom: #fb0d57 2px solid; }
+  width: auto;
+  height: auto;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 2px solid #f3f3f3;
+  padding: 7px 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 17px;
+  color: #1a1a1a;
+  background: #f3f3f3;
+  text-align: left;
+  border: none;
+  border-bottom: #fb0d57 6px solid; }
+  .info-title:hover {
+    cursor: pointer; }
+  .info-title:focus {
+    outline: none; }
+  .info-title:hover {
+    cursor: default;
+    color: #1a1a1a;
+    background: #f3f3f3; }
 
 .info-content {
   margin-bottom: 50px; }
   .info-content p {
-    margin-left: 10px; }
+    margin-left: 20px;
+    font-weight: bold; }
 
 .sns-icon-box {
   margin-top: 70px;
@@ -93,7 +122,8 @@ Contact Info Section
   justify-content: center; }
   .sns-icon-box .icon-bullet {
     margin: 0 auto;
-    margin: 10px; }
+    margin: 10px;
+    margin-left: 0; }
     .sns-icon-box .icon-bullet i {
       margin-top: 2px; }
     .sns-icon-box .icon-bullet:hover {
@@ -261,34 +291,41 @@ FAQ Section
     height: 550px; } }
 .contact-button {
   margin: 0 auto;
-  width: 80%;
-  height: 40px;
+  width: 250px;
+  height: auto;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  border: 2px solid #1a1a1a;
+  border: 2px solid #ffffff;
   padding: 7px 15px;
   text-align: center;
   font-weight: bold;
   font-size: 18px;
-  color: #ffffff;
-  background: #1a1a1a;
+  color: #1a1a1a;
+  background: #ffffff;
   margin-bottom: 30px;
-  padding-top: 0px; }
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 7px #46f992 solid;
+  box-shadow: inset 0 0 0 0 #46f992;
+  transition: all 0.7s ease; }
   .contact-button:hover {
-    cursor: pointer;
-    background: transparent;
-    color: #1a1a1a; }
+    cursor: pointer; }
   .contact-button:focus {
     outline: none; }
-  .contact-button a {
-    color: #ffffff; }
   .contact-button i {
     margin-right: 20px; }
-  .contact-button:hover a {
-    color: #1a1a1a; }
+  .contact-button:hover {
+    box-shadow: inset 0 -100px 0 0 #46f992; }
+
+.faq-btn {
+  box-shadow: inset 0 0 0 0 #fb0d57;
+  transition: all 0.7s ease; }
+  .faq-btn:hover {
+    box-shadow: inset 0 -100px 0 0 #fb0d57;
+    cursor: pointer; }
 
 .send-btn, .continue-btn {
   width: 120px;
@@ -309,9 +346,7 @@ FAQ Section
   box-shadow: inset 0 0 0 0 #F92116;
   transition: all 0.7s ease; }
   .send-btn:hover, .continue-btn:hover {
-    cursor: pointer;
-    background: transparent;
-    color: #bcbcbc; }
+    cursor: pointer; }
   .send-btn:focus, .continue-btn:focus {
     outline: none; }
   .send-btn:hover, .continue-btn:hover {
@@ -341,16 +376,14 @@ FAQ Section
   color: #ffffff;
   background: #1a1a1a; }
   .read-more-btn:hover {
-    cursor: pointer;
-    background: transparent;
-    color: #1a1a1a; }
+    cursor: pointer; }
   .read-more-btn:focus {
     outline: none; }
 
 .close-btn {
   background: transparent;
   border: none;
-  color: #5b5a59;
+  color: #bcbcbc;
   font-size: 30px;
   position: absolute;
   top: 5%;
@@ -370,6 +403,9 @@ FAQ Section
 .error {
   animation: wiggle 0.7s 1; }
 
+@media screen and (min-width: 650px) {
+  .contact-button {
+    width: 45%; } }
 .form-wrapper {
   position: fixed;
   top: 0;

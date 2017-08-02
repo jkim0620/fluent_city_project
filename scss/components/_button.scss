@@ -1,18 +1,25 @@
 .contact-button {
   margin: 0 auto;
-  @include button-style(80%, 40px, 4px, 18px, $black, $white);
+  @include button-style(250px, auto, 4px, 18px, $white, $black);
   margin-bottom: 30px;
-  padding-top: 0px;
-  a {
-    color: $white;
-  }
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 7px $accent-green solid;
+  @include readyToSlide($accent-green);
   i {
     margin-right: 20px;
   }
   &:hover{
-    a {
-      color: $black;
-    }
+    @include slideToTop(-100px, $accent-green);
+  }
+}
+
+
+.faq-btn {
+  @include readyToSlide($accent-pink);
+  &:hover {
+    @include slideToTop(-100px, $accent-pink);
+    cursor: pointer;
   }
 }
 
@@ -42,7 +49,7 @@
 .close-btn {
   background: transparent;
   border: none;
-  color: $mid-gray;
+  color: $gray;
   font-size: 30px;
   position: absolute;
   top: 5%;
@@ -72,4 +79,11 @@
 
 .error {
   animation: wiggle 0.7s 1;
+}
+
+// Media Query for tablet size and wider
+@media screen and (min-width: 650px) {
+  .contact-button {
+    width: 45%;
+  }
 }
