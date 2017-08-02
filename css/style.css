@@ -280,6 +280,8 @@ FAQ Section
 .slide-bg {
   box-shadow: inset 100px 0 0 0 #F92116;
   color: #ffffff; }
+  .slide-bg:hover {
+    color: #ffffff; }
 
 .read-more-btn {
   margin-top: 30px;

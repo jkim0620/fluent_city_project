@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   openForm.addEventListener("click", () => {
     formBg.classList.toggle("display");
     formBg.classList.toggle("opacity");
-    setTimeout(function() {
+    setTimeout(() => {
       formContainer.classList.toggle("slide");
     }, 100);
   });
@@ -25,11 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
     formBg.classList.toggle("opacity");
 
     // Reset form and button to original state
-    setTimeout(function() {
+    setTimeout(() => {
       formBg.classList.toggle("display");
       form.reset();
-      sendBtn.classList.remove("hidden-btn-bg");
-      sendBtn.classList.remove("enabled");
+      sendBtn.classList.remove("slide-bg");
   }, 500);
   });
 
@@ -42,18 +41,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function that adds a class that triggers animation that indicates it's ready to continue
   const animateButton = () => {
     // CHECK IF every form fields has contents
-    if (messageForm.name.value && messageForm.email.value && messageForm.message.value) {
+    if (messageForm.name.value && messageForm.message.value && messageForm.email.value.includes("@")) {
       // IF yes, add a class to the button that triggers an animation that let's the user know that button is ready to be clicked
-      // alert("Form ready to submit");
       sendBtn.classList.add("slide-bg");
-      // sendBtn.classList.add("enabeld");
     }
   }
 
   // Function that adds a class that triggers animation that indicates that form is not ready to be submitted
   const animateError = (e) => {
     // IF form has empty field, add a class that animates accordingly
-    if (!messageForm.name.value || !messageForm.email.value || !messageForm.message.value) {
+    if (!messageForm.name.value || !messageForm.email.value.includes("@") || !messageForm.message.value) {
+      sendBtn.classList.remove("slide-bg");
       sendBtn.classList.add("error");
 
       // Remove animation
@@ -63,8 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Reset button to original state
-    sendBtn.classList.remove("hidden-btn-bg");
-    sendBtn.classList.remove("enabled");
+    sendBtn.classList.remove("slide-bg");
   }
 
   // Function to trigger animateError onclick of send button

@@ -12,6 +12,9 @@
 .slide-bg {
   box-shadow: inset 100px 0 0 0 $red;
   color: $white;
+  &:hover {
+    color: $white;
+  }
 }
 
 .read-more-btn {
