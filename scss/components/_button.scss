@@ -1,10 +1,8 @@
 .contact-button {
   margin: 0 auto;
-  @include button-style(250px, auto, 4px, 18px, $white, $black);
   margin-bottom: 30px;
-  box-sizing: border-box;
-  border: none;
-  border-bottom: 7px $accent-green solid;
+  @include button-style(250px, auto, 4px, 18px, $white, $black);
+  @include border-bottom($accent-green, 7px);
   @include readyToSlide($accent-green);
   i {
     margin-right: 20px;
@@ -24,18 +22,15 @@
 }
 
 .send-btn, .continue-btn {
-  @include button-style(120px, 40px, 2px, 15px, $gray, $mid-gray);
-  &:hover {
-    background: $gray;
-    color: $mid-gray;
-  }
-  border: none;
-  @include readyToSlide($red);
+  @include button-style(200px, 60px, 2px, 15px, $white, $mid-gray);
+  @include border-bottom($gray, 5px);
+  @include readyToSlide($black);
 }
 
 .slide-bg {
-  @include slideToRight(120px, $red);
+  @include slideToRight(200px, $black);
   color: $white;
+  border-bottom-color: $black;
   &:hover {
     color: $white;
   }
@@ -43,13 +38,23 @@
 
 .read-more-btn {
   margin-top: 30px;
-  @include button-style(170px, 40px, 4px, 15px, $black, $white);
+  @include button-style(170px, 50px, 4px, 15px, $gray, $white);
+  @include border-bottom($mid-gray, 5px);
+  @include readyToSlide($black);
+  &:hover {
+    @include slideToTop(170px, $black);
+    border-bottom-color: $black;
+  }
+}
+
+.show-more {
+  display: block;
 }
 
 .close-btn {
   background: transparent;
   border: none;
-  color: $gray;
+  color: $mid-gray;
   font-size: 30px;
   position: absolute;
   top: 5%;

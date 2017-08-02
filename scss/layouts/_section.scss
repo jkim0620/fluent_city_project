@@ -39,7 +39,6 @@ Contact Info Section
   margin: 0 auto;
   width: 90%;
   padding: 20px 20px 30px 20px;
-  box-sizing: border-box;
 }
 
 .info-title {
@@ -92,7 +91,6 @@ Send Message Section
 
 .contact-now-section {
   width: 100%;
-  box-sizing: border-box;
   padding: 70px 50px;
   background: $light-blue;
   // background: $accent-pink;
@@ -139,7 +137,6 @@ FAQ Section
 .faq-section {
   width: 100%;
   padding: 50px 20px 100px 20px;
-  box-sizing: border-box;
   background: $light-gray;
 }
 
@@ -157,7 +154,6 @@ FAQ Section
 
 .faq-right {
   display: none;
-  // transition:
 }
 
 .hidden-faq {
@@ -174,7 +170,6 @@ FAQ Section
 @media screen and (min-width: 650px) {
   .contact-info-container {
     display: flex;
-    box-sizing: border-box;
     .contact-title {
       width: 500px;
       height: 90%;
@@ -185,7 +180,7 @@ FAQ Section
       padding: 50px;
       flex: 1;
       text-align: right;
-      box-sizing: border-box;
+
       h1 {
         font-size: 50px;
       }

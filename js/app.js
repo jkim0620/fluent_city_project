@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  
+
   // Variables for DOM elements
   let formBg = document.getElementById("form-bg");
   let optionContainer = document.getElementById("option-container");
@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let continueBtn = document.getElementById("continueBtn");
   let sendBtn = document.getElementById("sendBtn");
   let closeBtn = document.getElementById("closeBtn");
+  let faqBtn = document.getElementById("faq-btn");
   let readMoreBtn = document.getElementById("read-more-btn");
 
   // Function to open form with slide up effect
@@ -128,7 +129,34 @@ document.addEventListener("DOMContentLoaded", () => {
   validateForm();
 
 
+  // Rerence: https://stackoverflow.com/questions/17733076/smooth-scroll-anchor-links-without-jquery
+  // Smooth Scroll Effect with pure JavaScript
+  const scrollTo = (element, to, duration) => {
+    if (duration <= 0) return;
+    let difference = to - element.scrollTop;
+    let perTick = difference / duration * 10;
+
+    setTimeout(() => {
+        element.scrollTop = element.scrollTop + perTick;
+        if (element.scrollTop === to) return;
+        scrollTo(element, to, duration - 10);
+    }, 10);
+  }
+
+  let target = document.getElementById("faq-section");
+
+  faqBtn.addEventListener("click", () => {
+    scrollTo(document.body, target.offsetTop, 600);
+  });
 
 
+  // Toggle hidden FAQ contents on click of readmore button
+  let displayMore = document.getElementById("faq-right");
+  let displayMoreEl = document.getElementById("hidden-faq");
+
+  readMoreBtn.addEventListener("click", () => {
+    displayMore.classList.toggle("show-more");
+    displayMoreEl.classList.toggle("show-more");
+  });
 
 });

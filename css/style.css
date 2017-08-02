@@ -8,6 +8,11 @@ Base Color
 Base Font
 =======================
 */
+* {
+  box-sizing: border-box; }
+  *:focus {
+    outline: none; }
+
 body {
   font-family: "Roboto", "sans-serif";
   color: #1a1a1a;
@@ -79,8 +84,7 @@ Contact Info Section
 .contact-info-box {
   margin: 0 auto;
   width: 90%;
-  padding: 20px 20px 30px 20px;
-  box-sizing: border-box; }
+  padding: 20px 20px 30px 20px; }
 
 .info-title {
   margin-top: 30px;
@@ -91,7 +95,7 @@ Contact Info Section
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  border: 2px solid #f3f3f3;
+  border: none;
   padding: 7px 15px;
   text-align: center;
   font-weight: bold;
@@ -138,7 +142,6 @@ Send Message Section
 */
 .contact-now-section {
   width: 100%;
-  box-sizing: border-box;
   padding: 70px 50px;
   background: #b6f8ff; }
 
@@ -174,7 +177,6 @@ FAQ Section
 .faq-section {
   width: 100%;
   padding: 50px 20px 100px 20px;
-  box-sizing: border-box;
   background: #f3f3f3; }
 
 .faq-container {
@@ -198,8 +200,7 @@ FAQ Section
 
 @media screen and (min-width: 650px) {
   .contact-info-container {
-    display: flex;
-    box-sizing: border-box; }
+    display: flex; }
     .contact-info-container .contact-title {
       width: 500px;
       height: 90%;
@@ -209,8 +210,7 @@ FAQ Section
       border-bottom: none;
       padding: 50px;
       flex: 1;
-      text-align: right;
-      box-sizing: border-box; }
+      text-align: right; }
       .contact-info-container .contact-title h1 {
         font-size: 50px; }
       .contact-info-container .contact-title .contact-subtitle {
@@ -291,6 +291,7 @@ FAQ Section
     height: 550px; } }
 .contact-button {
   margin: 0 auto;
+  margin-bottom: 30px;
   width: 250px;
   height: auto;
   -webkit-border-radius: 4px;
@@ -298,17 +299,14 @@ FAQ Section
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  border: 2px solid #ffffff;
+  border: none;
   padding: 7px 15px;
   text-align: center;
   font-weight: bold;
   font-size: 18px;
   color: #1a1a1a;
   background: #ffffff;
-  margin-bottom: 30px;
-  box-sizing: border-box;
-  border: none;
-  border-bottom: 7px #46f992 solid;
+  border-bottom: #46f992 7px solid;
   box-shadow: inset 0 0 0 0 #46f992;
   transition: all 0.7s ease; }
   .contact-button:hover {
@@ -328,62 +326,69 @@ FAQ Section
     cursor: pointer; }
 
 .send-btn, .continue-btn {
-  width: 120px;
-  height: 40px;
+  width: 200px;
+  height: 60px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
   border-radius: 2px;
-  border: 2px solid #bcbcbc;
+  border: none;
   padding: 7px 15px;
   text-align: center;
   font-weight: bold;
   font-size: 15px;
   color: #5b5a59;
-  background: #bcbcbc;
-  border: none;
-  box-shadow: inset 0 0 0 0 #F92116;
+  background: #ffffff;
+  border-bottom: #bcbcbc 5px solid;
+  box-shadow: inset 0 0 0 0 #1a1a1a;
   transition: all 0.7s ease; }
   .send-btn:hover, .continue-btn:hover {
     cursor: pointer; }
   .send-btn:focus, .continue-btn:focus {
     outline: none; }
-  .send-btn:hover, .continue-btn:hover {
-    background: #bcbcbc;
-    color: #5b5a59; }
 
 .slide-bg {
-  box-shadow: inset 120px 0 0 0 #F92116;
-  color: #ffffff; }
+  box-shadow: inset 200px 0 0 0 #1a1a1a;
+  color: #ffffff;
+  border-bottom-color: #1a1a1a; }
   .slide-bg:hover {
     color: #ffffff; }
 
 .read-more-btn {
   margin-top: 30px;
   width: 170px;
-  height: 40px;
+  height: 50px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  border: 2px solid #1a1a1a;
+  border: none;
   padding: 7px 15px;
   text-align: center;
   font-weight: bold;
   font-size: 15px;
   color: #ffffff;
-  background: #1a1a1a; }
+  background: #bcbcbc;
+  border-bottom: #5b5a59 5px solid;
+  box-shadow: inset 0 0 0 0 #1a1a1a;
+  transition: all 0.7s ease; }
   .read-more-btn:hover {
     cursor: pointer; }
   .read-more-btn:focus {
     outline: none; }
+  .read-more-btn:hover {
+    box-shadow: inset 0 170px 0 0 #1a1a1a;
+    border-bottom-color: #1a1a1a; }
+
+.show-more {
+  display: block; }
 
 .close-btn {
   background: transparent;
   border: none;
-  color: #bcbcbc;
+  color: #5b5a59;
   font-size: 30px;
   position: absolute;
   top: 5%;
@@ -425,14 +430,14 @@ FAQ Section
 
 .form-container {
   position: absolute;
-  background: #ffffff;
+  background: #46f992;
   top: 100vh;
   left: 0;
   width: 100%;
   height: 80vh;
   text-align: center;
   padding: 70px 10px;
-  box-sizing: border-box;
+  overflow: scroll;
   transition: top 0.5s ease-in-out; }
 
 .confirm {
@@ -444,10 +449,70 @@ FAQ Section
 .slideDown {
   top: 100vh; }
 
-.form textarea {
-  width: 80%;
-  height: 200px; }
+.form {
+  margin: 0 auto; }
+  .form textarea {
+    width: 80%;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    border: 3px #1a1a1a solid; }
+  .form input {
+    width: 80%;
+    padding: 10px 20px;
+    font-size: 15px;
+    margin-top: 10px;
+    border: 3px #1a1a1a solid; }
+  .form .input-label {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase; }
 
+.radio-form {
+  margin-bottom: 50px; }
+  .radio-form input {
+    margin: 0;
+    margin-right: 10px;
+    width: auto; }
+  .radio-form label {
+    font-size: 18px;
+    font-weight: bold; }
+
+.required-style {
+  color: #fb0d57; }
+
+hr {
+  margin: 50px auto;
+  width: 80%;
+  border: 1px #ffffff solid; }
+
+@media screen and (min-width: 650px) {
+  .form {
+    width: 60%; } }
+@media screen and (min-width: 950px) {
+  .input-wrapper {
+    display: flex;
+    width: 90%;
+    margin: 0 auto; }
+
+  .input-flex {
+    flex: 1; }
+
+  hr {
+    display: none; }
+
+  .form textarea {
+    height: 200px; }
+
+  .radio-form {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    border-bottom: #ffffff 2px solid;
+    padding-bottom: 50px; } }
 .icon-bullet {
   width: 25px;
   height: 25px;

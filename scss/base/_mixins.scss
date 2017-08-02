@@ -6,7 +6,7 @@
   -ms-border-radius: $border-radius;
   -o-border-radius: $border-radius;
   border-radius: $border-radius;
-  border: 2px solid $bg-color;
+  border: none;
   padding: 7px 15px;
   text-align: center;
   font-weight: bold;
@@ -15,12 +15,14 @@
   background: $bg-color;
   &:hover {
     cursor: pointer;
-    // background: transparent;
-    // color: $bg-color;
   }
   &:focus {
     outline: none;
   }
+}
+
+@mixin border-bottom($color, $size) {
+  border-bottom: $color $size solid;
 }
 
 @mixin circle($size, $color) {
@@ -47,5 +49,5 @@
 }
 
 @mixin slideToTop($size, $color) {
-  box-shadow: inset 0 $size 0 0  $color; 
+  box-shadow: inset 0 $size 0 0  $color;
 }

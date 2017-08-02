@@ -54,8 +54,8 @@
             <div class="info-content">
               <p><a href="mailto:enroll@fluentcity.com"><span class="info-font">ENROLL@FLUENTCITY.COM</span></a></p>
             </div>
-            <a href="#faq-section">
-              <div class="info-title faq-btn">
+            <a>
+              <div id="faq-btn" class="info-title faq-btn">
                 <h3>FAQ</h3>
               </div>
             </a>
@@ -132,8 +132,8 @@
           <p>
             Size does matter! And we keep ‘em small. For language classes, max class size is 15 students, but most classes average around 8 - 10. For immersions, class sizes are capped at 20.
           </p>
-          <button id="ream-more-btn" class="read-more-btn" type="button" name="button">READ MORE</button>
-          <div class="hidden-faq">
+
+          <div id="hidden-faq" class="hidden-faq">
             <p class="faq-q">How do I know which language level to choose?</p>
             <p>
               You can find descriptions of each level on all language class pages. If you still have any questions, we’re happy to help you figure it out! Just give us a quick call at (877) 284-5122.
@@ -143,7 +143,7 @@
             </p>
           </div>
         </div>
-        <div class="faq-right">
+        <div id="faq-right" class="faq-right">
           <p class="faq-q">What can I expect in a typical class?</p>
           <p>
             Meet awesome people who are just as insatiably curious and excited to enrich their lives as you are. For immersions and popups, we love getting into the mix. Expect to do things like shake up your own cocktails, learn how to style your own spaces, and taste food and drink from many cultures.
@@ -160,6 +160,7 @@
             Plans change—we totally get it. That’s why you have until 7 days prior to the start date of your class to make any cancelations or same-level transfers. After that, refunds cannot be offered under any circumstance and for transfers, there may be a fee. (Exception: If you’re in an incorrect level placement for a language class, we’ll make sure to get you into the right one).
           </p>
         </div>
+        <button id="read-more-btn" class="read-more-btn" type="button" name="button">READ MORE</button>
       </div>
     </section> <!-- /FAQ Section -->
 
@@ -170,14 +171,19 @@
         <div id="option-container" class="form-container">
           <button id="optionCloseBtn" class="close-btn" type="button" name="button"><i class="fa fa-times" aria-hidden="true"></i></button>
           <form id="option" class="form">
-            <div>
-              Name
-            </div>
-            <div>
-              <input id="option-general" type="radio" name="radio">
-              <label for="option-general">GENERAL INQUIRY</label>
-              <input id="option-enrollment" type="radio" name="radio">
-              <label for="option-enrollment">ENROLLMENT INQUIRY</label>
+            <!-- <div>
+              Is this a
+            </div> -->
+            <div class="radio-form input-wrapper">
+              <div class="input-flex">
+                <input id="option-general" type="radio" name="radio">
+                <label for="option-general">GENERAL INQUIRY</label>
+              </div>
+              <hr />
+              <div class="input-flex">
+                <input id="option-enrollment" class="option" type="radio" name="radio">
+                <label for="option-enrollment">ENROLLMENT INQUIRY</label>
+              </div>
             </div>
 
             <button id="continueBtn" class="continue-btn">CONTINUE</button>
@@ -187,20 +193,28 @@
         <div id="form-container" class="form-container">
           <button id="closeBtn" class="close-btn" type="button" name="button"><i class="fa fa-times" aria-hidden="true"></i></button>
           <form id="form" class="form">
-            <div>
-              Name
+
+            <div class="input-wrapper">
+              <div class="input-flex">
+                <div class="input-label">
+                  Name <span class="required-style">*</span>
+                </div>
+                <div>
+                  <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+              </div>
+              <div class="input-flex">
+                <div class="input-label">
+                  Email <span class="required-style">*</span>
+                </div>
+                <div>
+                  <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+              </div>
             </div>
-            <div>
-              <input type="text" name="name" value="" placeholder="First Name" required>
-            </div>
-            <div>
-              Email
-            </div>
-            <div>
-              <input type="email" name="email" value="" placeholder="Email" required>
-            </div>
-            <div>
-              Message
+
+            <div class="input-label">
+              Message <span class="required-style">*</span>
             </div>
             <div>
               <textarea name="message" rows="8" cols="80" required></textarea>
