@@ -10,7 +10,7 @@
 * **SCSS** - For reusable mixins and variables
 * **JavaScript** - DOM manipulation
 * **Flexbox** - For responsive layout and columns
-* **Sketch** - For wire framing
+* **Sketch** - For wireframing
 
 ---
 
@@ -109,6 +109,6 @@ const wiggleAnimation = (el) => {
 ![black](https://user-images.githubusercontent.com/18605009/28884193-e5329884-777e-11e7-9b50-6117daf18362.png)
 
 
-* Wire frame using **Sketch**
+* Wireframe using **Sketch**
 ![screen shot 2017-08-02 at 12 13 01 pm](https://user-images.githubusercontent.com/18605009/28884269-2499ceac-777f-11e7-8bd8-748085b769ca.png)
 ---
