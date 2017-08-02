@@ -57,7 +57,7 @@
 
 #### # Conformed to the Fluent City's style guide
 
-* **Color Swatches -** (from left to right: **Accent Pink #FB0D57 /  Light Blue #B6F8FF / Accent Green #46F992 / White #FFFFFF / Black #1A1A1A**)
+* **Color Swatches -** (from left to right: Accent Pink **#FB0D57** /  Light Blue **#B6F8FF** / Accent Green **#46F992** / White **#FFFFFF** / Black **#1A1A1A**)
 
 
 ![accent-pink](https://user-images.githubusercontent.com/18605009/28884159-ceecd850-777e-11e7-8d3b-018d62e90935.png) ![light-blue](https://user-images.githubusercontent.com/18605009/28884179-d92ee196-777e-11e7-9907-4ece51373391.png)   ![accent-green](https://user-images.githubusercontent.com/18605009/28884120-b4f83d68-777e-11e7-9558-19e5df4f3ec5.png)   ![white](https://user-images.githubusercontent.com/18605009/28884206-ee59e23c-777e-11e7-9935-d8caecfc8d68.png)
