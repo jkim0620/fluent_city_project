@@ -127,6 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // SAVE user's name and show on 'confirm-message' section
       document.getElementById("user-name").innerHTML = `${form.name.value}`;
+      document.getElementById("user-email").innerHTML = `${form.email.value}`;
     });
 
     sendBtn.classList.remove("slide-bg");
