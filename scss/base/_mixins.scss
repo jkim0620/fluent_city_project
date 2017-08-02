@@ -62,6 +62,7 @@
   transition: all 0.7s ease;
 }
 
+
 // ON hover or click, trigger slideIn from left to right
 @mixin slideToRight($size, $color) {
   box-shadow: inset $size 0 0 0 $color;
