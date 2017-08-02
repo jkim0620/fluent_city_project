@@ -85,6 +85,7 @@
     font-size: 18px;
     font-weight: bold;
   }
+  margin-top: 10%;
   margin-bottom: 50px;
 }
 
@@ -96,6 +97,31 @@ hr {
   margin: 50px auto;
   width: 80%;
   border: 1px $white solid;
+}
+
+#user-name {
+  text-transform: uppercase;
+  color: $accent-pink;
+}
+
+#confirm-container {
+  background: $white;
+}
+
+.confirm-message {
+  margin: 0 auto;
+  width: 70%;
+  h1 {
+    line-height: 45px;
+    letter-spacing: 3px;
+  }
+  h2 {
+    line-height: 45px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: $gray;
+    text-transform: uppercase;
+  }
 }
 
 

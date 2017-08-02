@@ -105,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // IF yes, add a class to the button that triggers an animation that let's the user know that button is ready to be clicked
         slideInAnimation(sendBtn);
       }
+
     });
 
     // Function to trigger animateError onclick of send button
@@ -117,8 +118,11 @@ document.addEventListener("DOMContentLoaded", () => {
         confirmContainer.classList.toggle("slide");
         setTimeout(() => {
           closeAndResetForm();
-        }, 1500);
+        }, 3000);
       }
+
+      console.log(form.name.value);
+      document.getElementById("user-name").innerHTML = `${form.name.value}`;
       // sendBtn.classList.remove("slide-bg");
     });
 
@@ -146,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let target = document.getElementById("faq-section");
 
   faqBtn.addEventListener("click", () => {
-    scrollTo(document.body, target.offsetTop, 600);
+    scrollTo(document.body, target.offsetTop, 400);
   });
 
 
