@@ -1,11 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Content loaded!");
-
+  
   // Variables for DOM elements
   let formBg = document.getElementById("form-bg");
+  let optionContainer = document.getElementById("option-container");
   let formContainer = document.getElementById("form-container");
+  let confirmContainer = document.getElementById("confirm-container");
   let form = document.getElementById("form");
+  let option = document.getElementById("option");
+  let radios = document.getElementsByName("radio");
   let openForm = document.getElementById("open-form-btn");
+  let optionCloseBtn = document.getElementById("optionCloseBtn");
+  let continueBtn = document.getElementById("continueBtn");
   let sendBtn = document.getElementById("sendBtn");
   let closeBtn = document.getElementById("closeBtn");
   let readMoreBtn = document.getElementById("read-more-btn");
@@ -15,60 +20,115 @@ document.addEventListener("DOMContentLoaded", () => {
     formBg.classList.toggle("display");
     formBg.classList.toggle("opacity");
     setTimeout(() => {
-      formContainer.classList.toggle("slide");
+      optionContainer.classList.toggle("slide");
     }, 100);
   });
 
-  // Function to close form with slide up effect
-  closeBtn.addEventListener("click", () => {
-    formContainer.classList.toggle("slide");
-    formBg.classList.toggle("opacity");
+  // Reusable function to reset and close form
+  const closeAndResetForm = () => {
+    optionContainer.classList.remove("slide");
+    formContainer.classList.remove("slide");
+    confirmContainer.classList.remove("slide");
+    formBg.classList.remove("opacity");
 
     // Reset form and button to original state
     setTimeout(() => {
-      formBg.classList.toggle("display");
+      formBg.classList.remove("display");
+      option.reset();
       form.reset();
+      continueBtn.classList.remove("slide-bg");
       sendBtn.classList.remove("slide-bg");
-  }, 500);
-  });
+    }, 500);
+  }
+
+  // Reusable function to trigger close button
+  const clickCloseBtn = (el) => {
+    el.addEventListener("click", () => {
+      closeAndResetForm();
+    });
+  }
+
+  // Function to add slideIn effect to a button
+  const slideInAnimation = (el) => {
+    el.classList.add("slide-bg");
+  }
+
+  // Function to add wiggle animation to a button
+  const wiggleAnimation = (el) => {
+    el.classList.remove("slide-bg");
+    el.classList.add("error");
+
+    setTimeout(() => {
+      el.classList.remove("error");
+    }, 1000);
+  }
+
+
+  clickCloseBtn(optionCloseBtn);
+  clickCloseBtn(closeBtn);
+
+
+  // Function to validate if radio button is checked and ready to continue
+  const validateOption = () => {
+    // ON CLICK of radio buttion
+    option.addEventListener("change", () => {
+      slideInAnimation(continueBtn);
+    });
+
+    continueBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      let arr = [];
+      for (let i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+          arr.push(radios[i]);
+        }
+      }
+
+      if (arr.length === 0 ) {
+        wiggleAnimation(continueBtn);
+      } else {
+        formContainer.classList.toggle("slide");
+      }
+    });
+  } // End of validateOption function
+
+  validateOption();
+
 
   // Function to validate if the form is ready to be submitted
   const validateForm = () => {
     // ON CHANGE of the form
-    form.addEventListener("input", animateButton);
-  }
+    form.addEventListener("input", () => {
+      if (form.name.value && form.message.value && form.email.value.includes("@")) {
+        // IF yes, add a class to the button that triggers an animation that let's the user know that button is ready to be clicked
+        slideInAnimation(sendBtn);
+      }
+    });
 
-  // Function that adds a class that triggers animation that indicates it's ready to continue
-  const animateButton = () => {
-    // CHECK IF every form fields has contents
-    if (messageForm.name.value && messageForm.message.value && messageForm.email.value.includes("@")) {
-      // IF yes, add a class to the button that triggers an animation that let's the user know that button is ready to be clicked
-      sendBtn.classList.add("slide-bg");
-    }
-  }
+    // Function to trigger animateError onclick of send button
+    sendBtn.addEventListener("click", (e) => {
+      e.preventDefault();
 
-  // Function that adds a class that triggers animation that indicates that form is not ready to be submitted
-  const animateError = (e) => {
-    // IF form has empty field, add a class that animates accordingly
-    if (!messageForm.name.value || !messageForm.email.value.includes("@") || !messageForm.message.value) {
-      sendBtn.classList.remove("slide-bg");
-      sendBtn.classList.add("error");
+      if (!form.name.value || !form.email.value.includes("@") || !form.message.value) {
+        wiggleAnimation(sendBtn);
+      } else {
+        confirmContainer.classList.toggle("slide");
+        setTimeout(() => {
+          closeAndResetForm();
+        }, 1500);
+      }
+      // sendBtn.classList.remove("slide-bg");
+    });
 
-      // Remove animation
-      setTimeout(() => {
-        sendBtn.classList.remove("error");
-      }, 1000);
-    }
-
-    // Reset button to original state
     sendBtn.classList.remove("slide-bg");
-  }
 
-  // Function to trigger animateError onclick of send button
-  sendBtn.addEventListener("click", animateError);
+  } // End of validateForm function
 
-  // Invoke validateForm function
   validateForm();
+
+
+
 
 
 });

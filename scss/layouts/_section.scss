@@ -223,6 +223,10 @@ FAQ Section
     padding-bottom: 60px;
   }
 
+  .hidden-faq {
+    display: inline-block;
+  }
+
   .faq-right {
     display: block;
     flex: 1;
@@ -232,6 +236,9 @@ FAQ Section
   .faq-left {
     flex: 1;
     margin: 20px;
+    h1 {
+      text-align: left;
+    }
   }
 
   .read-more-btn {

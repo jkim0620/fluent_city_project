@@ -6,9 +6,10 @@
   //   width: 710px;
   //   margin-left: -60px;
   // }
-  background: url("../img/fluent_city_header7.jpg");
-  background-size: auto;
-  background-position-x: 30%;
+  background: url("../img/fluent_city_header6.jpg");
+  background-size: cover;
+  // background-size: auto;
+  // background-position-x: 30%;
   // background-position-y: -10%;
   background-repeat: no-repeat;
   .header-logo {
@@ -22,7 +23,7 @@
 // Media Query for tablet size and wider
 @media screen and (min-width: 650px) {
   .header-container {
-    height: 500px;
+    height: 550px;
     background-size: cover;
     // .header-img {
     //   width: inherit;

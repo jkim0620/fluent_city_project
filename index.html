@@ -6,6 +6,8 @@
 
     <title>Fluent City</title>
 
+    <link href="./img/fc_favicon.png" rel="icon" type="imge/png">
+
     <!-- Link to Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
 
@@ -20,45 +22,10 @@
   </head>
   <body>
 
-    <!-- <section class="main-wrapper">
-      <div class="main-container">
-        <h1>Hello</h1>
-        <button id="open-form" class="open-btn" type="button" name="button">CLICK</button>
-
-        Modal for form -->
-        <!-- <div id="modal" class="modal-wrapper">
-          <div class="modal-container">
-            <form id="form" class="form" name="messageForm">
-              <div>
-                Name
-              </div>
-              <div>
-                <input type="text" name="name" value="" placeholder="First Name" required>
-              </div>
-              <div>
-                Email
-              </div>
-              <div>
-                <input type="email" name="email" value="" placeholder="Email" required>
-              </div>
-              <div>
-                Message
-              </div>
-              <div>
-                <textarea name="message" rows="8" cols="80" required></textarea>
-              </div>
-              <button id="sendBtn" class="send-btn" type="submit" name="button">SEND</button>
-              <input class="send-btn" type="submit" name="" value="SEND"> -->
-            <!-- </form>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
     <header>
       <div class="header-container">
         <!-- <img class="header-img" src="./img/fluent_city_header7.jpg" alt=""> -->
-        <img class="header-logo" src="./img/fluent_city_logo_black.png" alt="">
+        <a href="https://www.fluentcity.com/"><img class="header-logo" src="./img/fluent_city_logo_black.png" alt=""></a>
       </div>
     </header>
 
@@ -195,9 +162,27 @@
     <!-- Hidden modal for form -->
     <section>
       <div id="form-bg" class="form-wrapper">
+
+        <div id="option-container" class="form-container">
+          <button id="optionCloseBtn" class="close-btn" type="button" name="button"><i class="fa fa-times" aria-hidden="true"></i></button>
+          <form id="option" class="form">
+            <div>
+              Name
+            </div>
+            <div>
+              <input id="option-general" type="radio" name="radio">
+              <label for="option-general">GENERAL INQUIRY</label>
+              <input id="option-enrollment" type="radio" name="radio">
+              <label for="option-enrollment">ENROLLMENT INQUIRY</label>
+            </div>
+
+            <button id="continueBtn" class="continue-btn">CONTINUE</button>
+          </form>
+        </div>
+
         <div id="form-container" class="form-container">
-          <button id="closeBtn" class="close-btn" type="button" name="button">X</button>
-          <form id="form" class="form" name="messageForm">
+          <button id="closeBtn" class="close-btn" type="button" name="button"><i class="fa fa-times" aria-hidden="true"></i></button>
+          <form id="form" class="form">
             <div>
               Name
             </div>
@@ -219,12 +204,22 @@
             <button id="sendBtn" class="send-btn" type="submit" name="button">SEND</button>
           </form>
         </div>
+
+        <div id="confirm-container" class="form-container">
+          <button id="confirmCloseBtn" class="close-btn" type="button" name="button"><i class="fa fa-times" aria-hidden="true"></i></button>
+          <h1>Thank you!</h1>
+        </div>
+
       </div>
     </section> <!-- /Hidden modal for form -->
 
     <footer class=footer-section>
       <div class="footer-container">
-
+        <div class="sns-icon-box">
+          <a href="https://www.facebook.com/fluentcity" target="_blank"><div class="icon-bullet"><i class="fa fa-facebook" aria-hidden="true"></i></div></a>
+          <a href="https://www.instagram.com/fluentcity" target="_blank"><div class="icon-bullet"><i class="fa fa-instagram" aria-hidden="true"></i></div></a>
+          <a href="https://twitter.com/fluentcity" target="_blank"><div class="icon-bullet"><i class="fa fa-twitter" aria-hidden="true"></i></div></a>
+        </div>
       </div>
     </footer>
   </body>
