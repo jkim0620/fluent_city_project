@@ -10,7 +10,7 @@
 * **SCSS** - For reusable mixins and variables
 * **JavaScript** - DOM manipulation
 * **Flexbox** - For responsive layout and columns
-* **Sketch** - Used for wire framing
+* **Sketch** - For wire framing
 
 ---
 
@@ -24,6 +24,42 @@
 #### # Interactive Buttons
 * **Buttons: disabled state -** onclick => triggers wiggle animation
 * **Buttons: enabled state -** onchange => triggers background color slideIn transition
+
+* SCSS code snippet
+```
+// Animation for a button to show error
+@keyframes wiggle {
+  from, to {
+    transform: translateX(0);
+  }
+
+  10%, 40%, 70%, 100% {
+    transform: translateX(-10px);
+  }
+
+  25%, 55%, 85% {
+    transform: translateX(10px);
+  }
+}
+
+.error {
+  animation: wiggle 0.7s 1;
+}
+```
+
+* JS code snippet
+
+```
+// Function to add wiggle animation to a button
+const wiggleAnimation = (el) => {
+  el.classList.remove("slide-bg");
+  el.classList.add("error");
+
+  setTimeout(() => {
+    el.classList.remove("error");
+  }, 1000);
+}
+```
 
 #### # Reusable Code
 
