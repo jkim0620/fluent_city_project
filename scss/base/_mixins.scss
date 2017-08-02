@@ -72,3 +72,33 @@
 @mixin slideToTop($size, $color) {
   box-shadow: inset 0 $size 0 0  $color;
 }
+
+/*
+=====================================
+ Mixin for Flexbox
+=====================================
+*/
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($val) {
+  -webkit-box-flex: $val;
+  -moz-box-flex: $val;
+  -webkit-flex: $val;
+  -ms-flex: $val;
+  flex: $val;
+}
+
+@mixin justify-content($val) {
+  -webkit-justify-content: $val;
+  -moz-justify-content: $val;
+  -ms-justify-content: $val;
+  -ms-flex-pack: $val;
+  justify-content: $val;
+}

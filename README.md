@@ -1,6 +1,6 @@
 ## Overview
 
-#### # Designed a mockup "Contact Us" page for **Fluent City** website
+#### # Designed a mobile friendly mockup "Contact Us" page for **Fluent City** website
 
 ---
 
@@ -22,8 +22,8 @@
 **1.** ```<input type="radio">``` for selection of options **2.** ```<input type="text">``` for entering user information and message
 
 #### # Interactive Buttons
-* **Buttons: disabled state -** onclick => triggers wiggle animation
-* **Buttons: enabled state -** onchange => triggers background color slideIn transition
+* **Buttons: disabled state -** onclick => triggers wiggle animation to let the user know button is not clickable
+* **Buttons: enabled state -** onchange => triggers background color slideIn transition to capture user's attention
 
 * SCSS code snippet
 ```

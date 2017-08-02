@@ -40,16 +40,15 @@ Contact Info Section
 }
 
 .info-title {
-  margin-top: 30px;
   @include button-style(auto, auto, 3px, 17px, $light-gray, $black);
+  @include border-bottom($accent-pink, 6px);
+  margin-top: 30px;
   text-align: left;
   &:hover {
     cursor: default;
     color: $black;
     background: $light-gray;
   }
-  border: none;
-  border-bottom: $accent-pink 6px solid;
 }
 
 .info-content {
@@ -62,8 +61,8 @@ Contact Info Section
 
 .sns-icon-box {
   margin-top: 70px;
-  display: flex;
-  justify-content: center;
+  @include flexbox;
+  @include justify-content(center);
   .icon-bullet {
     margin: 0 auto;
     margin: 10px;
@@ -165,7 +164,8 @@ FAQ Section
 // Media Query for tablet size and wider
 @media screen and (min-width: 650px) {
   .contact-info-container {
-    display: flex;
+    @include flexbox;
+
     .contact-title {
       width: 500px;
       height: 90%;
@@ -174,30 +174,28 @@ FAQ Section
       margin-left: 100px;
       border-bottom: none;
       padding: 50px;
-      flex: 1;
+      @include flex(1);
       text-align: right;
 
       h1 {
         font-size: 50px;
       }
       .contact-subtitle {
-        // margin-top: 40px;
         margin-left: 70px;
         width: 90%;
         float: right;
       }
     }
     .contact-info-box {
-      flex: 1;
+      @include flex(1);
       text-align: left;
-      // background: $light-gray;
       padding-left: 20px;
     }
   }
 
   .sns-icon-box {
     padding-left: 40px;
-    justify-content: left;
+    @include justify-content(left);
   }
 
   .team-section {
@@ -206,12 +204,12 @@ FAQ Section
 
   .team-container {
     padding-bottom: 70px;
-    display: flex;
+    @include flexbox;
     flex-wrap: wrap;
   }
 
   .member-box {
-    flex: 1;
+    @include flex(1);
     margin-right: 50px;
     margin-left: 30px;
     .member-img {
@@ -233,7 +231,7 @@ FAQ Section
 
     .contact-info-box {
       margin-left: 100px;
-      flex: 2;
+      @include flex(2);
     }
   }
 
@@ -242,7 +240,7 @@ FAQ Section
   }
 
   .faq-container {
-    display: flex;
+    @include flexbox;
     padding-top: 40px;
     padding-bottom: 60px;
   }
@@ -253,12 +251,12 @@ FAQ Section
 
   .faq-right {
     display: block;
-    flex: 1;
+    @include flex(1);
     margin: 10px 40px 10px 40px;
   }
 
   .faq-left {
-    flex: 1;
+    @include flex(1);
     margin: 20px;
     h1 {
       text-align: left;

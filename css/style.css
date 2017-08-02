@@ -57,6 +57,11 @@ a:visited {
 =====================================
 */
 /*
+=====================================
+ Mixin for Flexbox
+=====================================
+*/
+/*
 =========================
 FOOTER
 =========================
@@ -81,6 +86,10 @@ FOOTER
 
 @media screen and (min-width: 650px) {
   .footer-container .sns-icon-box {
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding-left: 0; } }
 /*
@@ -118,7 +127,6 @@ Contact Info Section
   padding: 20px 20px 30px 20px; }
 
 .info-title {
-  margin-top: 30px;
   width: auto;
   height: auto;
   -webkit-border-radius: 3px;
@@ -133,9 +141,13 @@ Contact Info Section
   font-size: 17px;
   color: #1a1a1a;
   background: #f3f3f3;
-  text-align: left;
-  border: none;
-  border-bottom: #fb0d57 6px solid; }
+  -webkit-border-bottom: #fb0d57 6px solid;
+  -moz-border-bottom: #fb0d57 6px solid;
+  -ms-border-bottom: #fb0d57 6px solid;
+  -o-border-bottom: #fb0d57 6px solid;
+  border-bottom: #fb0d57 6px solid;
+  margin-top: 30px;
+  text-align: left; }
   .info-title:hover {
     cursor: pointer; }
   .info-title:focus {
@@ -153,7 +165,15 @@ Contact Info Section
 
 .sns-icon-box {
   margin-top: 70px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center; }
   .sns-icon-box .icon-bullet {
     margin: 0 auto;
@@ -231,6 +251,10 @@ FAQ Section
 
 @media screen and (min-width: 650px) {
   .contact-info-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex; }
     .contact-info-container .contact-title {
       width: 500px;
@@ -240,6 +264,10 @@ FAQ Section
       margin-left: 100px;
       border-bottom: none;
       padding: 50px;
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
       flex: 1;
       text-align: right; }
       .contact-info-container .contact-title h1 {
@@ -249,12 +277,20 @@ FAQ Section
         width: 90%;
         float: right; }
     .contact-info-container .contact-info-box {
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
       flex: 1;
       text-align: left;
       padding-left: 20px; }
 
   .sns-icon-box {
     padding-left: 40px;
+    -webkit-justify-content: left;
+    -moz-justify-content: left;
+    -ms-justify-content: left;
+    -ms-flex-pack: left;
     justify-content: left; }
 
   .team-section {
@@ -262,10 +298,18 @@ FAQ Section
 
   .team-container {
     padding-bottom: 70px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-wrap: wrap; }
 
   .member-box {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     margin-right: 50px;
     margin-left: 30px; }
@@ -278,12 +322,20 @@ FAQ Section
     width: 70%; }
   .contact-info-container .contact-info-box {
     margin-left: 100px;
+    -webkit-box-flex: 2;
+    -moz-box-flex: 2;
+    -webkit-flex: 2;
+    -ms-flex: 2;
     flex: 2; }
 
   .info-title {
     width: 60%; }
 
   .faq-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     padding-top: 40px;
     padding-bottom: 60px; }
@@ -293,10 +345,18 @@ FAQ Section
 
   .faq-right {
     display: block;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     margin: 10px 40px 10px 40px; }
 
   .faq-left {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     margin: 20px; }
     .faq-left h1 {
@@ -525,9 +585,10 @@ MODAL - FORM STYLE
   .form textarea {
     width: 80%;
     height: 100px;
+    padding: 13px 20px;
     margin-top: 10px;
     margin-bottom: 20px;
-    font-size: 15px;
+    font-size: 17px;
     border: none;
     border-radius: 2px; }
     .form textarea:focus {
@@ -535,7 +596,7 @@ MODAL - FORM STYLE
   .form input {
     width: 80%;
     padding: 13px 20px;
-    font-size: 15px;
+    font-size: 17px;
     margin-top: 10px;
     border: none;
     border-radius: 2px; }
@@ -548,6 +609,9 @@ MODAL - FORM STYLE
     text-align: left;
     font-weight: bold;
     text-transform: uppercase; }
+
+.required-style {
+  color: #fb0d57; }
 
 .radio-form {
   margin-top: 10%;
@@ -565,7 +629,7 @@ hr {
   width: 80%;
   border: 1px #ffffff solid; }
 
-#user-name {
+.input-value {
   text-transform: uppercase;
   color: #fb0d57; }
 
@@ -581,7 +645,7 @@ hr {
   .confirm-message h2 {
     line-height: 45px;
     font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     color: #bcbcbc;
     text-transform: uppercase; }
 
@@ -590,11 +654,19 @@ hr {
     width: 60%; } }
 @media screen and (min-width: 950px) {
   .input-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     width: 90%;
     margin: 0 auto; }
 
   .input-flex {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1; }
 
   hr {

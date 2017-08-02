@@ -50,12 +50,12 @@ MODAL - FORM STYLE
   textarea {
     width: 80%;
     height: 100px;
+    padding: 13px 20px;
     margin-top: 10px;
     margin-bottom: 20px;
-    font-size: 15px;
+    font-size: 17px;
     border: none;
     border-radius: 2px;
-    // border: 3px $black solid;
     &:focus {
       background: $light-blue;
     }
@@ -63,11 +63,10 @@ MODAL - FORM STYLE
   input {
     width: 80%;
     padding: 13px 20px;
-    font-size: 15px;
+    font-size: 17px;
     margin-top: 10px;
     border: none;
     border-radius: 2px;
-    // border: 3px $black solid;
     &:focus {
       background: $light-blue;
     }
@@ -76,16 +75,18 @@ MODAL - FORM STYLE
     width: 80%;
     margin: 0 auto;
     margin-top: 20px;
-    // margin-left: 10px;
     text-align: left;
     font-weight: bold;
     text-transform: uppercase;
   }
 }
 
+.required-style {
+  color: $accent-pink;
+}
+
 // Style for radio type input
 .radio-form {
-  // text-align: left;
   input {
     margin: 0;
     margin-right: 10px;
@@ -106,7 +107,7 @@ hr {
   border: 1px $white solid;
 }
 
-#user-name {
+.input-value {
   text-transform: uppercase;
   color: $accent-pink;
 }
@@ -126,7 +127,7 @@ hr {
   h2 {
     line-height: 45px;
     font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     color: $gray;
     text-transform: uppercase;
   }
@@ -143,12 +144,12 @@ hr {
 // Media Query for desktop and wider
 @media screen and (min-width: 950px) {
   .input-wrapper {
-    display: flex;
+    @include flexbox;
     width: 90%;
     margin: 0 auto;
   }
   .input-flex {
-    flex: 1;
+    @include flex(1);
   }
 
   hr {
